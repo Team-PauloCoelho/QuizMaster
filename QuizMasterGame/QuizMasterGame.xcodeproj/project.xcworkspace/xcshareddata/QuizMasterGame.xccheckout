@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2D3C599B-ADDB-4BB4-9AC7-940F689067C3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>QuizMasterGame</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>72A90F6609034D38B80A3AD6EA68989FC92E5BDC</key>
+		<string>https://github.com/Team-PauloCoelho/QuizMaster.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>QuizMasterGame/QuizMasterGame.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>72A90F6609034D38B80A3AD6EA68989FC92E5BDC</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Team-PauloCoelho/QuizMaster.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>72A90F6609034D38B80A3AD6EA68989FC92E5BDC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>72A90F6609034D38B80A3AD6EA68989FC92E5BDC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>QuizMaster</string>
+		</dict>
+	</array>
+</dict>
+</plist>
