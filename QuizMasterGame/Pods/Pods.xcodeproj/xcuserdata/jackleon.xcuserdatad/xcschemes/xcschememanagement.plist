@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-QuizMasterGame-Facebook-iOS-SDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-QuizMasterGame-Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4F6090A7723AD68792F58B4C</key>
+		<key>47296ECC10B7019A25CBC61C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E9779FACDC50B59D140D4CE</key>
+		<key>4D7B7ABF4B67D054EE6EEB64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C037A28F1E3392D947E00FF0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C6E6212F82F232276EAA6246</key>
+		<key>6C33A99EBFC82CEA7A0565DE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

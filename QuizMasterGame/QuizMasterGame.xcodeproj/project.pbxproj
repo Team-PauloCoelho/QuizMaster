@@ -16,6 +16,7 @@
 		571656821A09185600457F3E /* QuizMasterGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 571656811A09185600457F3E /* QuizMasterGameTests.m */; };
 		572E35031A0AAEE000337942 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 572E35021A0AAEE000337942 /* MainViewController.m */; };
 		572E35061A0AAF8D00337942 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 572E35051A0AAF8D00337942 /* RegisterViewController.m */; };
+		577BECB21A0B09E1001AA16D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577BECB11A0B09E1001AA16D /* GameViewController.m */; };
 		5798E5B41A0A599300D02F40 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5798E5B31A0A599300D02F40 /* background.jpg */; };
 		5798E5C21A0A71BF00D02F40 /* background-home-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5798E5C11A0A71BF00D02F40 /* background-home-1.png */; };
 		5798E5C61A0A852C00D02F40 /* background-init.png in Resources */ = {isa = PBXBuildFile; fileRef = 5798E5C51A0A852C00D02F40 /* background-init.png */; };
@@ -51,6 +52,8 @@
 		572E35021A0AAEE000337942 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		572E35041A0AAF8D00337942 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		572E35051A0AAF8D00337942 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		577BECB01A0B09E1001AA16D /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		577BECB11A0B09E1001AA16D /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		5798E5B31A0A599300D02F40 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		5798E5C11A0A71BF00D02F40 /* background-home-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-home-1.png"; sourceTree = "<group>"; };
 		5798E5C51A0A852C00D02F40 /* background-init.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-init.png"; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				572E35021A0AAEE000337942 /* MainViewController.m */,
 				572E35041A0AAF8D00337942 /* RegisterViewController.h */,
 				572E35051A0AAF8D00337942 /* RegisterViewController.m */,
+				577BECB01A0B09E1001AA16D /* GameViewController.h */,
+				577BECB11A0B09E1001AA16D /* GameViewController.m */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				571656681A09185500457F3E /* AppDelegate.m in Sources */,
 				571656651A09185500457F3E /* main.m in Sources */,
 				5716566B1A09185600457F3E /* QuizMasterGame.xcdatamodeld in Sources */,
+				577BECB21A0B09E1001AA16D /* GameViewController.m in Sources */,
 				572E35031A0AAEE000337942 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,7 +451,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QuizMasterGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -457,6 +465,7 @@
 				INFOPLIST_FILE = QuizMasterGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};

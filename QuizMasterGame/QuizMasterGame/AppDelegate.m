@@ -135,23 +135,4 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-//
-////FACEBOOK
-//- (BOOL)application:(UIApplication *)application
-//            openURL:(NSURL *)url
-//  sourceApplication:(NSString *)sourceApplication
-//         annotation:(id)annotation {
-//    return [FBAppCall handleOpenURL:url
-//                  sourceApplication:sourceApplication
-//                        withSession:[PFFacebookUtils session]];
-//}
-//
-//- (void)applicationDidBecomeActive:(UIApplication *)application {
-//    [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
-//}
-//
-//- (void)applicationWillTerminate:(UIApplication *)application {
-//    [[PFFacebookUtils session] close];
-//}
-//
 @end
