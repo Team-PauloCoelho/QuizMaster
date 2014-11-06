@@ -17,6 +17,7 @@
 		572E35031A0AAEE000337942 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 572E35021A0AAEE000337942 /* MainViewController.m */; };
 		572E35061A0AAF8D00337942 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 572E35051A0AAF8D00337942 /* RegisterViewController.m */; };
 		574C6A631A0BC7D000731A9B /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 574C6A621A0BC7D000731A9B /* AudioController.m */; };
+		574C6A6B1A0BE14300731A9B /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 574C6A6A1A0BE14300731A9B /* song.mp3 */; };
 		577BECB21A0B09E1001AA16D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577BECB11A0B09E1001AA16D /* GameViewController.m */; };
 		5798E5B41A0A599300D02F40 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5798E5B31A0A599300D02F40 /* background.jpg */; };
 		5798E5C21A0A71BF00D02F40 /* background-home-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5798E5C11A0A71BF00D02F40 /* background-home-1.png */; };
@@ -28,7 +29,6 @@
 		57E50BEA1A0B9E7400F088E7 /* green-rectangle-button-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE51A0B9E7400F088E7 /* green-rectangle-button-hi.png */; };
 		57E50BEB1A0B9E7400F088E7 /* 15787_wpm_lowres.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE61A0B9E7400F088E7 /* 15787_wpm_lowres.png */; };
 		57E50BEC1A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE71A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png */; };
-		57E50BEF1A0BB4AC00F088E7 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BEE1A0BB4AC00F088E7 /* song.mp3 */; };
 		6A3224EF48D9FE8B1C6FD90A /* libPods-QuizMasterGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F6546A41807A0B720BD47E /* libPods-QuizMasterGame.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +63,7 @@
 		572E35051A0AAF8D00337942 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		574C6A611A0BC7D000731A9B /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
 		574C6A621A0BC7D000731A9B /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		574C6A6A1A0BE14300731A9B /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		577BECB01A0B09E1001AA16D /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		577BECB11A0B09E1001AA16D /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		5798E5B31A0A599300D02F40 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		57E50BE51A0B9E7400F088E7 /* green-rectangle-button-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-rectangle-button-hi.png"; sourceTree = "<group>"; };
 		57E50BE61A0B9E7400F088E7 /* 15787_wpm_lowres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15787_wpm_lowres.png; sourceTree = "<group>"; };
 		57E50BE71A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glossy_button_blank_green_rectangle.png; sourceTree = "<group>"; };
-		57E50BEE1A0BB4AC00F088E7 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		CFFDFA9407BED7B4125EBD0C /* Pods-QuizMasterGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizMasterGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuizMasterGame/Pods-QuizMasterGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +109,7 @@
 		571656561A09185500457F3E = {
 			isa = PBXGroup;
 			children = (
+				574C6A691A0BE0D800731A9B /* Resources */,
 				571656611A09185500457F3E /* QuizMasterGame */,
 				5716567E1A09185600457F3E /* QuizMasterGameTests */,
 				571656601A09185500457F3E /* Products */,
@@ -192,6 +193,14 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		574C6A691A0BE0D800731A9B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				574C6A6A1A0BE14300731A9B /* song.mp3 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		5798E5AC1A0A4B6F00D02F40 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +221,6 @@
 		57E50BED1A0BB47800F088E7 /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				57E50BEE1A0BB4AC00F088E7 /* song.mp3 */,
 			);
 			name = Music;
 			sourceTree = "<group>";
@@ -311,13 +319,13 @@
 				5798E5B41A0A599300D02F40 /* background.jpg in Resources */,
 				571656711A09185600457F3E /* Main.storyboard in Resources */,
 				57E50BEA1A0B9E7400F088E7 /* green-rectangle-button-hi.png in Resources */,
+				574C6A6B1A0BE14300731A9B /* song.mp3 in Resources */,
 				57E50BE11A0B9B9800F088E7 /* orange-button-hi.png in Resources */,
 				5798E5C21A0A71BF00D02F40 /* background-home-1.png in Resources */,
 				57E50BEC1A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png in Resources */,
 				57E50BEB1A0B9E7400F088E7 /* 15787_wpm_lowres.png in Resources */,
 				571656761A09185600457F3E /* LaunchScreen.xib in Resources */,
 				571656731A09185600457F3E /* Images.xcassets in Resources */,
-				57E50BEF1A0BB4AC00F088E7 /* song.mp3 in Resources */,
 				57E50BE21A0B9B9800F088E7 /* yellow-rectangle-button-hi.png in Resources */,
 				57E50BE81A0B9E7400F088E7 /* glossy_button_blank_blue_rectangle_T.png in Resources */,
 				57E50BE91A0B9E7400F088E7 /* glossy_button_blank_aqua_rectangle_T.png in Resources */,

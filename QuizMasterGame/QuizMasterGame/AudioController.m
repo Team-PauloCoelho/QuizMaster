@@ -30,7 +30,7 @@
     if (self) {
         [self configureAudioSession];
         [self configureAudioPlayer];
-        [self configureSystemSound];
+   //     [self configureSystemSound];
     }
     return self;
 }
@@ -80,8 +80,10 @@
 
 - (void)configureAudioPlayer {
     // Create audio player with background music
-    NSString *backgroundMusicPath = [[NSBundle mainBundle] pathForResource:@"song" ofType:@"mp3"];
-    NSURL *backgroundMusicURL = [NSURL fileURLWithPath:backgroundMusicPath];
+
+    NSURL *backgroundMusicURL = [[NSBundle mainBundle]
+                    URLForResource: @"song" withExtension:@"mp3"];
+    
     self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:nil];
     self.backgroundMusicPlayer.delegate = self;  // We need this so we can restart after interruptions
     self.backgroundMusicPlayer.numberOfLoops = -1;	// Negative number means loop forever
