@@ -24,6 +24,19 @@ const int MAIN_MAX_LENGTH = 20;
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+    
+    UIImage *imageView = [UIImage imageNamed:@"background-home-1.png"
+    ];
+    
+    UIImageView *backgroundImage = [[UIImageView alloc] initWithFrame:self.view.frame];
+    [backgroundImage setImage: imageView
+];
+    
+
+    [backgroundImage setContentMode:UIViewContentModeScaleAspectFill];
+    
+    [self.view insertSubview:backgroundImage atIndex:0];
+
 }
 
 - (void)didReceiveMemoryWarning {
