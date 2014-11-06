@@ -16,6 +16,7 @@
 		571656821A09185600457F3E /* QuizMasterGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 571656811A09185600457F3E /* QuizMasterGameTests.m */; };
 		572E35031A0AAEE000337942 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 572E35021A0AAEE000337942 /* MainViewController.m */; };
 		572E35061A0AAF8D00337942 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 572E35051A0AAF8D00337942 /* RegisterViewController.m */; };
+		574C6A631A0BC7D000731A9B /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 574C6A621A0BC7D000731A9B /* AudioController.m */; };
 		577BECB21A0B09E1001AA16D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577BECB11A0B09E1001AA16D /* GameViewController.m */; };
 		5798E5B41A0A599300D02F40 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5798E5B31A0A599300D02F40 /* background.jpg */; };
 		5798E5C21A0A71BF00D02F40 /* background-home-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5798E5C11A0A71BF00D02F40 /* background-home-1.png */; };
@@ -60,6 +61,8 @@
 		572E35021A0AAEE000337942 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		572E35041A0AAF8D00337942 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		572E35051A0AAF8D00337942 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		574C6A611A0BC7D000731A9B /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		574C6A621A0BC7D000731A9B /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
 		577BECB01A0B09E1001AA16D /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		577BECB11A0B09E1001AA16D /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		5798E5B31A0A599300D02F40 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 		571656611A09185500457F3E /* QuizMasterGame */ = {
 			isa = PBXGroup;
 			children = (
+				574C6A601A0BC77A00731A9B /* Controllers */,
 				57E50BED1A0BB47800F088E7 /* Music */,
 				572E35001A0AAE5000337942 /* ViewModels */,
 				5798E5AC1A0A4B6F00D02F40 /* Images */,
@@ -177,6 +181,15 @@
 				577BECB11A0B09E1001AA16D /* GameViewController.m */,
 			);
 			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		574C6A601A0BC77A00731A9B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				574C6A611A0BC7D000731A9B /* AudioController.h */,
+				574C6A621A0BC7D000731A9B /* AudioController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		5798E5AC1A0A4B6F00D02F40 /* Images */ = {
@@ -363,6 +376,7 @@
 				571656681A09185500457F3E /* AppDelegate.m in Sources */,
 				571656651A09185500457F3E /* main.m in Sources */,
 				5716566B1A09185600457F3E /* QuizMasterGame.xcdatamodeld in Sources */,
+				574C6A631A0BC7D000731A9B /* AudioController.m in Sources */,
 				577BECB21A0B09E1001AA16D /* GameViewController.m in Sources */,
 				572E35031A0AAEE000337942 /* MainViewController.m in Sources */,
 			);

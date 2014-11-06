@@ -7,11 +7,14 @@
 //
 
 #import "MainViewController.h"
-#import <Parse/Parse.h>
+#import "AudioController.h"
 #import "GameViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import <Parse/Parse.h>
 
 @interface MainViewController ()
+
+@property (strong, nonatomic) AudioController *audioController;
 
 @end
 
@@ -24,16 +27,29 @@ const int MAIN_MIN_LENGTH = 6;
 const int MAIN_MAX_LENGTH = 20;
 
 - (void)viewDidLoad {
-  NSURL *url = [NSURL
-      fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"song"
-                                                      ofType:@"mp3"]];
-  AVAudioPlayer *audioPlayer =
-      [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-  [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback
-                                         error:nil];
-  [[AVAudioSession sharedInstance] setActive:YES error:nil];
-  [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
-  [audioPlayer play];
+    [super viewDidLoad];
+    
+    self.audioController = [[AudioController alloc] init];
+    [self.audioController tryPlayMusic];
+//
+//    NSError *error;
+//    NSString *backgroundMusicURL = @"song.mp3" ;
+//    self.backgroundMusicPlayer = [[AVAudioPlayer alloc]
+//                                  initWit:backgroundMusicURL error:&error];
+//    [self.backgroundMusicPlayer prepareToPlay];
+//    [self.backgroundMusicPlayer play];
+//    
+    
+//  NSURL *url = [NSURL
+//      fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"song"
+//                                                      ofType:@"mp3"]];
+//  AVAudioPlayer *audioPlayer =
+//      [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+//  [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback
+//                                         error:nil];
+//  [[AVAudioSession sharedInstance] setActive:YES error:nil];
+//  [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+//  [audioPlayer play];
 
   UIImage *imageView = [UIImage imageNamed:@"background-home-1.png"];
 
@@ -44,8 +60,7 @@ const int MAIN_MAX_LENGTH = 20;
   [backgroundImage setContentMode:UIViewContentModeScaleAspectFill];
 
   [self.view insertSubview:backgroundImage atIndex:0];
-  [super viewDidLoad];
-}
+ }
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
