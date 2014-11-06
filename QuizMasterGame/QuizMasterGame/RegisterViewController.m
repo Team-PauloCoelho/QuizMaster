@@ -39,32 +39,32 @@ const int ZERO_LENGTH = 0;
   BOOL hasError = NO;
 
   if (self.username.text.length < MIN_LENGTH) {
-    [stringBuilderError appendString:TOO_SHORT_USERNAME];
+    [stringBuilderError appendFormat:@"%@\n" ,TOO_SHORT_USERNAME];
     hasError = YES;
   }
 
   if (self.username.text.length > MAX_LENGTH) {
-    [stringBuilderError appendString:TOO_LONG_USERNAME];
+    [stringBuilderError appendFormat:@"%@\n" ,TOO_LONG_USERNAME];
     hasError = YES;
   }
 
   if (![self isValidEmail:self.email.text]) {
-    [stringBuilderError appendString:INVALID_EMAIL_FORMAT];
+    [stringBuilderError appendFormat:@"%@\n" ,INVALID_EMAIL_FORMAT];
     hasError = YES;
   }
 
   if (self.password.text.length < MIN_LENGTH) {
-    [stringBuilderError appendString:TOO_SHORT_PASSWORD];
+    [stringBuilderError appendFormat:@"%@\n" ,TOO_SHORT_PASSWORD];
     hasError = YES;
   }
 
   if (self.password.text.length > MAX_LENGTH) {
-    [stringBuilderError appendString:TOO_LONG_PASSWORD];
+    [stringBuilderError appendFormat:@"%@\n" ,TOO_LONG_PASSWORD];
     hasError = YES;
   }
 
   if (![self.password.text isEqualToString:self.confirmPassword.text]) {
-    [stringBuilderError appendString:PASSOWRDS_DONT_MATCH];
+    [stringBuilderError appendFormat:@"%@\n" ,PASSOWRDS_DONT_MATCH];
     hasError = YES;
   }
 
