@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QuizMasterGame/MainViewController.m"
-            timestampString = "436971261.778562"
+            timestampString = "436974856.797054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "-buttonSignInTapped:"
             landmarkType = "5">
          </BreakpointContent>

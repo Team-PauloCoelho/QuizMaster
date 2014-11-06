@@ -27,6 +27,7 @@
 		57E50BEA1A0B9E7400F088E7 /* green-rectangle-button-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE51A0B9E7400F088E7 /* green-rectangle-button-hi.png */; };
 		57E50BEB1A0B9E7400F088E7 /* 15787_wpm_lowres.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE61A0B9E7400F088E7 /* 15787_wpm_lowres.png */; };
 		57E50BEC1A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE71A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png */; };
+		57E50BEF1A0BB4AC00F088E7 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BEE1A0BB4AC00F088E7 /* song.mp3 */; };
 		6A3224EF48D9FE8B1C6FD90A /* libPods-QuizMasterGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F6546A41807A0B720BD47E /* libPods-QuizMasterGame.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		57E50BE51A0B9E7400F088E7 /* green-rectangle-button-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-rectangle-button-hi.png"; sourceTree = "<group>"; };
 		57E50BE61A0B9E7400F088E7 /* 15787_wpm_lowres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15787_wpm_lowres.png; sourceTree = "<group>"; };
 		57E50BE71A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glossy_button_blank_green_rectangle.png; sourceTree = "<group>"; };
+		57E50BEE1A0BB4AC00F088E7 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		CFFDFA9407BED7B4125EBD0C /* Pods-QuizMasterGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizMasterGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuizMasterGame/Pods-QuizMasterGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 		571656611A09185500457F3E /* QuizMasterGame */ = {
 			isa = PBXGroup;
 			children = (
+				57E50BED1A0BB47800F088E7 /* Music */,
 				572E35001A0AAE5000337942 /* ViewModels */,
 				5798E5AC1A0A4B6F00D02F40 /* Images */,
 				571656661A09185500457F3E /* AppDelegate.h */,
@@ -191,6 +194,14 @@
 				5798E5B31A0A599300D02F40 /* background.jpg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		57E50BED1A0BB47800F088E7 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				57E50BEE1A0BB4AC00F088E7 /* song.mp3 */,
+			);
+			name = Music;
 			sourceTree = "<group>";
 		};
 		BF0E8BDE15B917F162AA1EC6 /* Pods */ = {
@@ -293,6 +304,7 @@
 				57E50BEB1A0B9E7400F088E7 /* 15787_wpm_lowres.png in Resources */,
 				571656761A09185600457F3E /* LaunchScreen.xib in Resources */,
 				571656731A09185600457F3E /* Images.xcassets in Resources */,
+				57E50BEF1A0BB4AC00F088E7 /* song.mp3 in Resources */,
 				57E50BE21A0B9B9800F088E7 /* yellow-rectangle-button-hi.png in Resources */,
 				57E50BE81A0B9E7400F088E7 /* glossy_button_blank_blue_rectangle_T.png in Resources */,
 				57E50BE91A0B9E7400F088E7 /* glossy_button_blank_aqua_rectangle_T.png in Resources */,

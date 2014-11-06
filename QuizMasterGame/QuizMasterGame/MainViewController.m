@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import <Parse/Parse.h>
 #import "GameViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface MainViewController ()
 
@@ -23,20 +24,27 @@ const int MAIN_MIN_LENGTH = 6;
 const int MAIN_MAX_LENGTH = 20;
 
 - (void)viewDidLoad {
+  NSURL *url = [NSURL
+      fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"song"
+                                                      ofType:@"mp3"]];
+  AVAudioPlayer *audioPlayer =
+      [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+  [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback
+                                         error:nil];
+  [[AVAudioSession sharedInstance] setActive:YES error:nil];
+  [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+  [audioPlayer play];
+
+  UIImage *imageView = [UIImage imageNamed:@"background-home-1.png"];
+
+  UIImageView *backgroundImage =
+      [[UIImageView alloc] initWithFrame:self.view.frame];
+  [backgroundImage setImage:imageView];
+
+  [backgroundImage setContentMode:UIViewContentModeScaleAspectFill];
+
+  [self.view insertSubview:backgroundImage atIndex:0];
   [super viewDidLoad];
-    
-    UIImage *imageView = [UIImage imageNamed:@"background-home-1.png"
-    ];
-    
-    UIImageView *backgroundImage = [[UIImageView alloc] initWithFrame:self.view.frame];
-    [backgroundImage setImage: imageView
-];
-    
-
-    [backgroundImage setContentMode:UIViewContentModeScaleAspectFill];
-    
-    [self.view insertSubview:backgroundImage atIndex:0];
-
 }
 
 - (void)didReceiveMemoryWarning {
