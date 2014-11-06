@@ -30,7 +30,6 @@
     if (self) {
         [self configureAudioSession];
         [self configureAudioPlayer];
-   //     [self configureSystemSound];
     }
     return self;
 }
@@ -88,19 +87,6 @@
     self.backgroundMusicPlayer.delegate = self;  // We need this so we can restart after interruptions
     self.backgroundMusicPlayer.numberOfLoops = -1;	// Negative number means loop forever
 }
-
-- (void)configureSystemSound {
-    // This is the simplest way to play a sound.
-    // But note with System Sound services you can only use:
-    // File Formats (a.k.a. audio containers or extensions): CAF, AIF, WAV
-    // Data Formats (a.k.a. audio encoding): linear PCM (such as LEI16) or IMA4
-    // Sounds must be 30 sec or less
-    // And only one sound plays at a time!
-    NSString *pewPewPath = [[NSBundle mainBundle] pathForResource:@"pew-pew-lei" ofType:@"caf"];
-    NSURL *pewPewURL = [NSURL fileURLWithPath:pewPewPath];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)pewPewURL, &_pewPewSound);
-}
-
 #pragma mark - AVAudioPlayerDelegate methods
 
 - (void) audioPlayerBeginInterruption: (AVAudioPlayer *) player {

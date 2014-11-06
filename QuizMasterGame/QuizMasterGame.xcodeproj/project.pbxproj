@@ -19,14 +19,14 @@
 		574C6A631A0BC7D000731A9B /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 574C6A621A0BC7D000731A9B /* AudioController.m */; };
 		574C6A6B1A0BE14300731A9B /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 574C6A6A1A0BE14300731A9B /* song.mp3 */; };
 		577BECB21A0B09E1001AA16D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577BECB11A0B09E1001AA16D /* GameViewController.m */; };
+		5797E7DD1A0C02ED009839B7 /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797E7DC1A0C02ED009839B7 /* RankingViewController.m */; };
+		5797E7E01A0C03D5009839B7 /* TotalPointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797E7DF1A0C03D5009839B7 /* TotalPointsViewController.m */; };
+		5797E7E31A0C03EC009839B7 /* TotalGamesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797E7E21A0C03EC009839B7 /* TotalGamesViewController.m */; };
 		5798E5B41A0A599300D02F40 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5798E5B31A0A599300D02F40 /* background.jpg */; };
 		5798E5C21A0A71BF00D02F40 /* background-home-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5798E5C11A0A71BF00D02F40 /* background-home-1.png */; };
 		5798E5C61A0A852C00D02F40 /* background-init.png in Resources */ = {isa = PBXBuildFile; fileRef = 5798E5C51A0A852C00D02F40 /* background-init.png */; };
 		57E50BE11A0B9B9800F088E7 /* orange-button-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BDF1A0B9B9800F088E7 /* orange-button-hi.png */; };
 		57E50BE21A0B9B9800F088E7 /* yellow-rectangle-button-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE01A0B9B9800F088E7 /* yellow-rectangle-button-hi.png */; };
-		57E50BE81A0B9E7400F088E7 /* glossy_button_blank_blue_rectangle_T.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE31A0B9E7400F088E7 /* glossy_button_blank_blue_rectangle_T.png */; };
-		57E50BE91A0B9E7400F088E7 /* glossy_button_blank_aqua_rectangle_T.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE41A0B9E7400F088E7 /* glossy_button_blank_aqua_rectangle_T.png */; };
-		57E50BEA1A0B9E7400F088E7 /* green-rectangle-button-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE51A0B9E7400F088E7 /* green-rectangle-button-hi.png */; };
 		57E50BEB1A0B9E7400F088E7 /* 15787_wpm_lowres.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE61A0B9E7400F088E7 /* 15787_wpm_lowres.png */; };
 		57E50BEC1A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE71A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png */; };
 		6A3224EF48D9FE8B1C6FD90A /* libPods-QuizMasterGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F6546A41807A0B720BD47E /* libPods-QuizMasterGame.a */; };
@@ -66,14 +66,17 @@
 		574C6A6A1A0BE14300731A9B /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		577BECB01A0B09E1001AA16D /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		577BECB11A0B09E1001AA16D /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		5797E7DB1A0C02ED009839B7 /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
+		5797E7DC1A0C02ED009839B7 /* RankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingViewController.m; sourceTree = "<group>"; };
+		5797E7DE1A0C03D5009839B7 /* TotalPointsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalPointsViewController.h; sourceTree = "<group>"; };
+		5797E7DF1A0C03D5009839B7 /* TotalPointsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalPointsViewController.m; sourceTree = "<group>"; };
+		5797E7E11A0C03EC009839B7 /* TotalGamesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalGamesViewController.h; sourceTree = "<group>"; };
+		5797E7E21A0C03EC009839B7 /* TotalGamesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalGamesViewController.m; sourceTree = "<group>"; };
 		5798E5B31A0A599300D02F40 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		5798E5C11A0A71BF00D02F40 /* background-home-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-home-1.png"; sourceTree = "<group>"; };
 		5798E5C51A0A852C00D02F40 /* background-init.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-init.png"; sourceTree = "<group>"; };
 		57E50BDF1A0B9B9800F088E7 /* orange-button-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange-button-hi.png"; sourceTree = "<group>"; };
 		57E50BE01A0B9B9800F088E7 /* yellow-rectangle-button-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-rectangle-button-hi.png"; sourceTree = "<group>"; };
-		57E50BE31A0B9E7400F088E7 /* glossy_button_blank_blue_rectangle_T.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glossy_button_blank_blue_rectangle_T.png; sourceTree = "<group>"; };
-		57E50BE41A0B9E7400F088E7 /* glossy_button_blank_aqua_rectangle_T.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glossy_button_blank_aqua_rectangle_T.png; sourceTree = "<group>"; };
-		57E50BE51A0B9E7400F088E7 /* green-rectangle-button-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-rectangle-button-hi.png"; sourceTree = "<group>"; };
 		57E50BE61A0B9E7400F088E7 /* 15787_wpm_lowres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15787_wpm_lowres.png; sourceTree = "<group>"; };
 		57E50BE71A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glossy_button_blank_green_rectangle.png; sourceTree = "<group>"; };
 		CFFDFA9407BED7B4125EBD0C /* Pods-QuizMasterGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizMasterGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuizMasterGame/Pods-QuizMasterGame.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				574C6A601A0BC77A00731A9B /* Controllers */,
-				57E50BED1A0BB47800F088E7 /* Music */,
 				572E35001A0AAE5000337942 /* ViewModels */,
 				5798E5AC1A0A4B6F00D02F40 /* Images */,
 				571656661A09185500457F3E /* AppDelegate.h */,
@@ -180,6 +182,12 @@
 				572E35051A0AAF8D00337942 /* RegisterViewController.m */,
 				577BECB01A0B09E1001AA16D /* GameViewController.h */,
 				577BECB11A0B09E1001AA16D /* GameViewController.m */,
+				5797E7DB1A0C02ED009839B7 /* RankingViewController.h */,
+				5797E7DC1A0C02ED009839B7 /* RankingViewController.m */,
+				5797E7DE1A0C03D5009839B7 /* TotalPointsViewController.h */,
+				5797E7DF1A0C03D5009839B7 /* TotalPointsViewController.m */,
+				5797E7E11A0C03EC009839B7 /* TotalGamesViewController.h */,
+				5797E7E21A0C03EC009839B7 /* TotalGamesViewController.m */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -204,9 +212,6 @@
 		5798E5AC1A0A4B6F00D02F40 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				57E50BE31A0B9E7400F088E7 /* glossy_button_blank_blue_rectangle_T.png */,
-				57E50BE41A0B9E7400F088E7 /* glossy_button_blank_aqua_rectangle_T.png */,
-				57E50BE51A0B9E7400F088E7 /* green-rectangle-button-hi.png */,
 				57E50BE61A0B9E7400F088E7 /* 15787_wpm_lowres.png */,
 				57E50BE71A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png */,
 				57E50BDF1A0B9B9800F088E7 /* orange-button-hi.png */,
@@ -216,13 +221,6 @@
 				5798E5B31A0A599300D02F40 /* background.jpg */,
 			);
 			name = Images;
-			sourceTree = "<group>";
-		};
-		57E50BED1A0BB47800F088E7 /* Music */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Music;
 			sourceTree = "<group>";
 		};
 		BF0E8BDE15B917F162AA1EC6 /* Pods */ = {
@@ -318,7 +316,6 @@
 			files = (
 				5798E5B41A0A599300D02F40 /* background.jpg in Resources */,
 				571656711A09185600457F3E /* Main.storyboard in Resources */,
-				57E50BEA1A0B9E7400F088E7 /* green-rectangle-button-hi.png in Resources */,
 				574C6A6B1A0BE14300731A9B /* song.mp3 in Resources */,
 				57E50BE11A0B9B9800F088E7 /* orange-button-hi.png in Resources */,
 				5798E5C21A0A71BF00D02F40 /* background-home-1.png in Resources */,
@@ -327,8 +324,6 @@
 				571656761A09185600457F3E /* LaunchScreen.xib in Resources */,
 				571656731A09185600457F3E /* Images.xcassets in Resources */,
 				57E50BE21A0B9B9800F088E7 /* yellow-rectangle-button-hi.png in Resources */,
-				57E50BE81A0B9E7400F088E7 /* glossy_button_blank_blue_rectangle_T.png in Resources */,
-				57E50BE91A0B9E7400F088E7 /* glossy_button_blank_aqua_rectangle_T.png in Resources */,
 				5798E5C61A0A852C00D02F40 /* background-init.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +378,9 @@
 				572E35061A0AAF8D00337942 /* RegisterViewController.m in Sources */,
 				571656681A09185500457F3E /* AppDelegate.m in Sources */,
 				571656651A09185500457F3E /* main.m in Sources */,
+				5797E7DD1A0C02ED009839B7 /* RankingViewController.m in Sources */,
+				5797E7E01A0C03D5009839B7 /* TotalPointsViewController.m in Sources */,
+				5797E7E31A0C03EC009839B7 /* TotalGamesViewController.m in Sources */,
 				5716566B1A09185600457F3E /* QuizMasterGame.xcdatamodeld in Sources */,
 				574C6A631A0BC7D000731A9B /* AudioController.m in Sources */,
 				577BECB21A0B09E1001AA16D /* GameViewController.m in Sources */,
