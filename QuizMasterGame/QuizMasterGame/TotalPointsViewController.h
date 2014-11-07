@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TotalPointsViewController : UIViewController
+@interface TotalPointsViewController : UIViewController <UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property NSArray *usersData;
 
 @end

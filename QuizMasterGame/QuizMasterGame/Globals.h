@@ -53,6 +53,9 @@ extern NSString *const CLASS_NAME_QUESTION;
 // Rotation
 extern const float MATH_PI;
 
+// Cheats
+extern NSString *const CHEAT_CORRECT_ANSWER;
+
 @end
 
 

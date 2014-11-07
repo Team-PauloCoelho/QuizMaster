@@ -16,6 +16,9 @@
 @property(weak, nonatomic) IBOutlet UIButton *answerC;
 @property(weak, nonatomic) IBOutlet UIButton *answerD;
 
+- (IBAction)longPressGesture:(UILongPressGestureRecognizer *)sender;
+- (IBAction)rotationGesture:(UIRotationGestureRecognizer *)sender;
+
 @property GameFinishViewController *gameFinishView;
 @property int points;
 @property NSArray *questions;

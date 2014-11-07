@@ -144,15 +144,34 @@
   [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-/*
-#pragma mark - Navigation
+- (IBAction)longPressGesture:(UILongPressGestureRecognizer *)sender {
+  if (sender.state == UIGestureRecognizerStateEnded) {
+    NSString *answer;
 
-// In a storyboard-based application, you will often want to do a little
-preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if (self.currentAnswer == 1) {
+      answer = self.answerA.titleLabel.text;
+    } else if (self.currentAnswer == 2) {
+      answer = self.answerB.titleLabel.text;
+    } else if (self.currentAnswer == 3) {
+      answer = self.answerC.titleLabel.text;
+    } else if (self.currentAnswer == 4) {
+      answer = self.answerD.titleLabel.text;
+    }
+
+    UIAlertView *cheat = [[UIAlertView alloc] initWithTitle:CHEAT_CORRECT_ANSWER
+                                                    message:answer
+                                                   delegate:nil
+                                          cancelButtonTitle:CANCEL_TITLE
+                                          otherButtonTitles:nil];
+
+    [cheat show];
+  }
 }
-*/
+
+- (IBAction)rotationGesture:(UIRotationGestureRecognizer *)sender {
+  if (sender.state == UIGestureRecognizerStateEnded) {
+    [self getNextQuestion];
+  }
+}
 
 @end

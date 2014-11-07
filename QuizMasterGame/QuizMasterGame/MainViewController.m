@@ -86,13 +86,13 @@
                                       UIStoryboard *storyboard = [UIStoryboard
                                           storyboardWithName:STORYBOARD_NAME
                                                       bundle:nil];
-                                      GameViewController *viewController =
-                                          (GameViewController *)[storyboard
-                                              instantiateViewControllerWithIdentifier:
-                                                  GAME_ID];
-                                      [self presentViewController:viewController
-                                                         animated:YES
-                                                       completion:nil];
+                                        GameViewController *viewController =
+                                        (GameViewController *)[storyboard
+                                                               instantiateViewControllerWithIdentifier:
+                                                               GAME_ID];
+                                        [self presentViewController:viewController
+                                                           animated:YES
+                                                         completion:nil];
                                     } else {
                                       NSString *errorString =
                                           [error userInfo][@"error"];

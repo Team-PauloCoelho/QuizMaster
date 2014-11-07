@@ -80,8 +80,8 @@
     user.email = self.email.text;
 
     // other fields can be set just like with PFObject
-    // user[@"phone"] = @"415-392-0202";
-
+    user[@"games"] = 0;
+    user[@"points"] = 0;
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
           UIAlertView *success =

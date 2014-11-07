@@ -52,5 +52,7 @@ NSString *const CLASS_NAME_QUESTION = @"Question";
 // Rotation
 const float MATH_PI = 3.14159265358979323846264338327950288;
 
+// Cheats
+NSString *const CHEAT_CORRECT_ANSWER = @"Correct answer CHEAT";
 
 @end
