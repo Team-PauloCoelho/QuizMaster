@@ -8,21 +8,14 @@
 
 #import "RegisterViewController.h"
 #import <Parse/Parse.h>
+#import "Globals.h"
 
 @interface RegisterViewController ()
 
 @end
 
 @implementation RegisterViewController
-NSString *const TOO_SHORT_USERNAME = @"Username is too short!";
-NSString *const TOO_LONG_USERNAME = @"Username is too long!";
-NSString *const TOO_SHORT_PASSWORD = @"Password is too short!";
-NSString *const TOO_LONG_PASSWORD = @"Password is too long!";
-NSString *const PASSOWRDS_DONT_MATCH = @"Passwords don't match!";
-NSString *const INVALID_EMAIL_FORMAT = @"Invalid email format!";
-const int MIN_LENGTH = 6;
-const int MAX_LENGTH = 20;
-const int ZERO_LENGTH = 0;
+
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -39,45 +32,46 @@ const int ZERO_LENGTH = 0;
   BOOL hasError = NO;
 
   if (self.username.text.length < MIN_LENGTH) {
-    [stringBuilderError appendFormat:@"%@\n" ,TOO_SHORT_USERNAME];
+    [stringBuilderError appendFormat:@"%@\n", TOO_SHORT_USERNAME];
     hasError = YES;
   }
 
   if (self.username.text.length > MAX_LENGTH) {
-    [stringBuilderError appendFormat:@"%@\n" ,TOO_LONG_USERNAME];
+    [stringBuilderError appendFormat:@"%@\n", TOO_LONG_USERNAME];
     hasError = YES;
   }
 
   if (![self isValidEmail:self.email.text]) {
-    [stringBuilderError appendFormat:@"%@\n" ,INVALID_EMAIL_FORMAT];
+    [stringBuilderError appendFormat:@"%@\n", INVALID_EMAIL_FORMAT];
     hasError = YES;
   }
 
   if (self.password.text.length < MIN_LENGTH) {
-    [stringBuilderError appendFormat:@"%@\n" ,TOO_SHORT_PASSWORD];
+    [stringBuilderError appendFormat:@"%@\n", TOO_SHORT_PASSWORD];
     hasError = YES;
   }
 
   if (self.password.text.length > MAX_LENGTH) {
-    [stringBuilderError appendFormat:@"%@\n" ,TOO_LONG_PASSWORD];
+    [stringBuilderError appendFormat:@"%@\n", TOO_LONG_PASSWORD];
     hasError = YES;
   }
 
   if (![self.password.text isEqualToString:self.confirmPassword.text]) {
-    [stringBuilderError appendFormat:@"%@\n" ,PASSOWRDS_DONT_MATCH];
+    [stringBuilderError appendFormat:@"%@\n", PASSOWRDS_DONT_MATCH];
     hasError = YES;
   }
 
   if (hasError) {
-    UIAlertView *validationError = [[UIAlertView alloc] initWithTitle:@"Validation Error!"
-                                                    message:stringBuilderError
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
+    UIAlertView *validationError =
+        [[UIAlertView alloc] initWithTitle: ERROR_VALIDATION_TITLE
+                                   message:stringBuilderError
+                                  delegate:nil
+                         cancelButtonTitle:CANCEL_TITLE
+                         otherButtonTitles:nil];
 
     [validationError show];
-      
-        [self.navigationController popViewControllerAnimated:YES];
+
+    [self.navigationController popViewControllerAnimated:YES];
 
   } else {
 
@@ -92,19 +86,20 @@ const int ZERO_LENGTH = 0;
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
           UIAlertView *success =
-              [[UIAlertView alloc] initWithTitle:@"Information!"
-                                         message:@"Successful registration!"
+              [[UIAlertView alloc] initWithTitle: SUCCESS_TITLE
+                                         message:SUCCESSFUL_REGISTRATION_MESSAGE
                                         delegate:nil
-                               cancelButtonTitle:@"OK"
+                               cancelButtonTitle:CANCEL_TITLE
                                otherButtonTitles:nil];
 
           [success show];
+          [self dismissViewControllerAnimated:YES completion:nil];
         } else {
           NSString *errorString = [error userInfo][@"error"];
-          UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Error!"
+          UIAlertView *error = [[UIAlertView alloc] initWithTitle:ERROR_TITLE
                                                           message:errorString
                                                          delegate:nil
-                                                cancelButtonTitle:@"OK"
+                                                cancelButtonTitle:CANCEL_TITLE
                                                 otherButtonTitles:nil];
 
           [error show];
@@ -114,8 +109,8 @@ const int ZERO_LENGTH = 0;
 }
 
 - (BOOL)isValidEmail:(NSString *)checkString {
-  BOOL stricterFilter = NO; // Discussion
-  // http://blog.logichigh.com/2010/09/02/validating-an-e-mail-address/
+  BOOL stricterFilter = NO;
+    
   NSString *stricterFilterString =
       @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
   NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";

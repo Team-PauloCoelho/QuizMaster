@@ -7,6 +7,7 @@
 //
 
 #import "GameViewController.h"
+#import "Globals.h" 
 
 @interface GameViewController ()
 
@@ -17,7 +18,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  UIImage *imageView = [UIImage imageNamed:@"background-home-1.png"];
+  UIImage *imageView = [UIImage imageNamed: BACKGROUND_HOME];
 
   UIImageView *backgroundImage =
       [[UIImageView alloc] initWithFrame:self.view.frame];
