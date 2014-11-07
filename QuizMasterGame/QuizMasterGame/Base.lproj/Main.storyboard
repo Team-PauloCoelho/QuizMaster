@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="htx-oT-0j3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -463,12 +463,12 @@
         <!--Item 2-->
         <scene sceneID="waM-cr-CW8">
             <objects>
-                <viewController storyboardIdentifier="pesho" id="bCm-0V-iNf" customClass="TotalGamesViewController" sceneMemberID="viewController">
+                <viewController id="bCm-0V-iNf" customClass="TotalGamesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dop-EV-zSa"/>
                         <viewControllerLayoutGuide type="bottom" id="6uA-CA-Rou"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VUg-Qc-owj">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="TopGamesID" id="VUg-Qc-owj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -500,7 +500,7 @@
                                     <constraint firstAttribute="width" constant="349" id="Hv3-ub-X29"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="YH1-6Y-sbn">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellGames" id="YH1-6Y-sbn">
                                         <rect key="frame" x="0.0" y="0.0" width="349" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YH1-6Y-sbn" id="VmW-3Q-mHo">
@@ -524,7 +524,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="Alt-hJ-TfT"/>
                     <connections>
-                        <outlet property="tableViewGames" destination="l4C-T8-0ZL" id="JAw-Iu-J2S"/>
+                        <outlet property="tableViewGames" destination="l4C-T8-0ZL" id="2gZ-Pq-T7s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pRY-1M-8RQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

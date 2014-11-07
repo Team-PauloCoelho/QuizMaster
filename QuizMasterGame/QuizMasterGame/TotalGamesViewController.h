@@ -10,6 +10,7 @@
 
 @interface TotalGamesViewController : UIViewController<UITableViewDataSource>
 
+
 @property (weak, nonatomic) IBOutlet UITableView *tableViewGames;
 
 @property NSArray *usersDataGames;
