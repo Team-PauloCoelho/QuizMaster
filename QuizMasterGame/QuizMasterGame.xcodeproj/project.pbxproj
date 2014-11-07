@@ -19,6 +19,9 @@
 		574C6A631A0BC7D000731A9B /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 574C6A621A0BC7D000731A9B /* AudioController.m */; };
 		574C6A6B1A0BE14300731A9B /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 574C6A6A1A0BE14300731A9B /* song.mp3 */; };
 		577BECB21A0B09E1001AA16D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577BECB11A0B09E1001AA16D /* GameViewController.m */; };
+		5790CF4B1A0CE47E005C18D6 /* GameFinishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5790CF491A0CE47E005C18D6 /* GameFinishViewController.m */; };
+		5790CF4C1A0CE47E005C18D6 /* GameFinishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5790CF4A1A0CE47E005C18D6 /* GameFinishViewController.xib */; };
+		5790CF4E1A0CED74005C18D6 /* game-over.png in Resources */ = {isa = PBXBuildFile; fileRef = 5790CF4D1A0CED74005C18D6 /* game-over.png */; };
 		5797E7DD1A0C02ED009839B7 /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797E7DC1A0C02ED009839B7 /* RankingViewController.m */; };
 		5797E7E01A0C03D5009839B7 /* TotalPointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797E7DF1A0C03D5009839B7 /* TotalPointsViewController.m */; };
 		5797E7E31A0C03EC009839B7 /* TotalGamesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5797E7E21A0C03EC009839B7 /* TotalGamesViewController.m */; };
@@ -26,6 +29,7 @@
 		5798E5B41A0A599300D02F40 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5798E5B31A0A599300D02F40 /* background.jpg */; };
 		5798E5C21A0A71BF00D02F40 /* background-home-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5798E5C11A0A71BF00D02F40 /* background-home-1.png */; };
 		5798E5C61A0A852C00D02F40 /* background-init.png in Resources */ = {isa = PBXBuildFile; fileRef = 5798E5C51A0A852C00D02F40 /* background-init.png */; };
+		579A9C1F1A0D0CE200E2D8D8 /* game-won.png in Resources */ = {isa = PBXBuildFile; fileRef = 579A9C1E1A0D0CE200E2D8D8 /* game-won.png */; };
 		57E50BE11A0B9B9800F088E7 /* orange-button-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BDF1A0B9B9800F088E7 /* orange-button-hi.png */; };
 		57E50BE21A0B9B9800F088E7 /* yellow-rectangle-button-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE01A0B9B9800F088E7 /* yellow-rectangle-button-hi.png */; };
 		57E50BEB1A0B9E7400F088E7 /* 15787_wpm_lowres.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE61A0B9E7400F088E7 /* 15787_wpm_lowres.png */; };
@@ -69,6 +73,10 @@
 		574C6A6A1A0BE14300731A9B /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		577BECB01A0B09E1001AA16D /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		577BECB11A0B09E1001AA16D /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		5790CF481A0CE47E005C18D6 /* GameFinishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameFinishViewController.h; sourceTree = "<group>"; };
+		5790CF491A0CE47E005C18D6 /* GameFinishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameFinishViewController.m; sourceTree = "<group>"; };
+		5790CF4A1A0CE47E005C18D6 /* GameFinishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameFinishViewController.xib; sourceTree = "<group>"; };
+		5790CF4D1A0CED74005C18D6 /* game-over.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game-over.png"; sourceTree = "<group>"; };
 		5797E7DB1A0C02ED009839B7 /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
 		5797E7DC1A0C02ED009839B7 /* RankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingViewController.m; sourceTree = "<group>"; };
 		5797E7DE1A0C03D5009839B7 /* TotalPointsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalPointsViewController.h; sourceTree = "<group>"; };
@@ -80,6 +88,7 @@
 		5798E5B31A0A599300D02F40 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		5798E5C11A0A71BF00D02F40 /* background-home-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-home-1.png"; sourceTree = "<group>"; };
 		5798E5C51A0A852C00D02F40 /* background-init.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-init.png"; sourceTree = "<group>"; };
+		579A9C1E1A0D0CE200E2D8D8 /* game-won.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game-won.png"; sourceTree = "<group>"; };
 		57E50BDF1A0B9B9800F088E7 /* orange-button-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange-button-hi.png"; sourceTree = "<group>"; };
 		57E50BE01A0B9B9800F088E7 /* yellow-rectangle-button-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-rectangle-button-hi.png"; sourceTree = "<group>"; };
 		57E50BE61A0B9E7400F088E7 /* 15787_wpm_lowres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15787_wpm_lowres.png; sourceTree = "<group>"; };
@@ -142,6 +151,7 @@
 		571656611A09185500457F3E /* QuizMasterGame */ = {
 			isa = PBXGroup;
 			children = (
+				5790CF471A0CE437005C18D6 /* CustomViews */,
 				574C6A601A0BC77A00731A9B /* Helpers */,
 				572E35001A0AAE5000337942 /* ViewModels */,
 				5798E5AC1A0A4B6F00D02F40 /* Images */,
@@ -224,9 +234,21 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		5790CF471A0CE437005C18D6 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				5790CF481A0CE47E005C18D6 /* GameFinishViewController.h */,
+				5790CF491A0CE47E005C18D6 /* GameFinishViewController.m */,
+				5790CF4A1A0CE47E005C18D6 /* GameFinishViewController.xib */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
 		5798E5AC1A0A4B6F00D02F40 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				579A9C1E1A0D0CE200E2D8D8 /* game-won.png */,
+				5790CF4D1A0CED74005C18D6 /* game-over.png */,
 				57E50BE61A0B9E7400F088E7 /* 15787_wpm_lowres.png */,
 				57E50BE71A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png */,
 				57E50BDF1A0B9B9800F088E7 /* orange-button-hi.png */,
@@ -329,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				579A9C1F1A0D0CE200E2D8D8 /* game-won.png in Resources */,
 				5798E5B41A0A599300D02F40 /* background.jpg in Resources */,
 				571656711A09185600457F3E /* Main.storyboard in Resources */,
 				574C6A6B1A0BE14300731A9B /* song.mp3 in Resources */,
@@ -336,8 +359,10 @@
 				5798E5C21A0A71BF00D02F40 /* background-home-1.png in Resources */,
 				57E50BEC1A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png in Resources */,
 				57E50BEB1A0B9E7400F088E7 /* 15787_wpm_lowres.png in Resources */,
+				5790CF4C1A0CE47E005C18D6 /* GameFinishViewController.xib in Resources */,
 				571656761A09185600457F3E /* LaunchScreen.xib in Resources */,
 				571656731A09185600457F3E /* Images.xcassets in Resources */,
+				5790CF4E1A0CED74005C18D6 /* game-over.png in Resources */,
 				57E50BE21A0B9B9800F088E7 /* yellow-rectangle-button-hi.png in Resources */,
 				5798E5C61A0A852C00D02F40 /* background-init.png in Resources */,
 			);
@@ -393,6 +418,7 @@
 				572E35061A0AAF8D00337942 /* RegisterViewController.m in Sources */,
 				571656681A09185500457F3E /* AppDelegate.m in Sources */,
 				571656651A09185500457F3E /* main.m in Sources */,
+				5790CF4B1A0CE47E005C18D6 /* GameFinishViewController.m in Sources */,
 				5797E7DD1A0C02ED009839B7 /* RankingViewController.m in Sources */,
 				5797E7E01A0C03D5009839B7 /* TotalPointsViewController.m in Sources */,
 				57F95B101A0C417D0016A34B /* PlayViewController.m in Sources */,

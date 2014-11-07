@@ -30,8 +30,11 @@ extern NSString *const ERROR_TITLE;
 extern NSString *const CANCEL_TITLE ;
 extern NSString *const WINNER_TITLE;
 extern NSString *const WINNER_MESSAGE;
+extern NSString *const GAME_WON_IMAGE;
 extern NSString *const GAME_OVER_TITLE;
 extern NSString *const GAME_OVER_MESSAGE;
+extern NSString *const GAME_OVER_IMAGE;
+
 
 
 // Storyboard and views
@@ -46,4 +49,10 @@ extern NSString *const QUESTION_ANSWER_B;
 extern NSString *const QUESTION_ANSWER_C;
 extern NSString *const QUESTION_ANSWER_D;
 extern NSString *const CLASS_NAME_QUESTION;
+
+// Rotation
+extern const float MATH_PI;
+
 @end
+
+

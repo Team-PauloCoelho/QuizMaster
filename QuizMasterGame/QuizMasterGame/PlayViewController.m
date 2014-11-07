@@ -17,11 +17,14 @@
 @implementation PlayViewController
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
+
+  self.gameFinishView =
+      [GameFinishViewController initWithParentView:self andType:YES];
 
   self.points = 0;
   self.questionNumber = 0;
   [self getAllQuestions];
+  [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,20 +54,12 @@
 
     ++self.questionNumber;
   } else {
-    UIAlertView *winnerMessage = [[UIAlertView alloc]
-            initWithTitle: WINNER_TITLE
-                  message: WINNER_MESSAGE
-                 delegate:nil
-        cancelButtonTitle:CANCEL_TITLE
-        otherButtonTitles:nil];
-
-    [winnerMessage show];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self showEndGameScreen];
   }
 }
 
 - (void)getAllQuestions {
-  PFQuery *query = [PFQuery queryWithClassName: CLASS_NAME_QUESTION];
+  PFQuery *query = [PFQuery queryWithClassName:CLASS_NAME_QUESTION];
   [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
       if (!error) {
 
@@ -105,14 +100,7 @@
     ++self.points;
     [self getNextQuestion];
   } else {
-    UIAlertView *error = [[UIAlertView alloc] initWithTitle: GAME_OVER_TITLE
-                                                    message: GAME_OVER_MESSAGE
-                                                   delegate:nil
-                                          cancelButtonTitle: CANCEL_TITLE
-                                          otherButtonTitles:nil];
-
-    [error show];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self showGameOverScreen];
   }
 }
 
@@ -122,6 +110,38 @@
   } else {
     return NO;
   }
+}
+
+- (void)showEndGameScreen {
+  self.gameFinishView.isGameOver = NO;
+  [self.gameFinishView showOnScreen];
+  UIAlertView *winnerMessage = [[UIAlertView alloc] initWithTitle:WINNER_TITLE
+                                                          message:WINNER_MESSAGE
+                                                         delegate:self
+                                                cancelButtonTitle:CANCEL_TITLE
+                                                otherButtonTitles:nil];
+
+  [winnerMessage show];
+}
+
+- (void)showGameOverScreen {
+
+  self.gameFinishView.isGameOver = YES;
+  [self.gameFinishView showOnScreen];
+  UIAlertView *error = [[UIAlertView alloc] initWithTitle:GAME_OVER_TITLE
+                                                  message:GAME_OVER_MESSAGE
+                                                 delegate:self
+                                        cancelButtonTitle:CANCEL_TITLE
+                                        otherButtonTitles:nil];
+
+  [error show];
+}
+
+- (void)alertView:(UIAlertView *)alertView
+    clickedButtonAtIndex:(NSInteger)buttonIndex {
+  [self.gameFinishView hideFromScreen];
+
+  [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

@@ -34,6 +34,9 @@
   // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)returnToGame:(UIStoryboardSegue *)segue {
+}
+
 /*
 #pragma mark - Navigation
 

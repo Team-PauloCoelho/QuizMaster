@@ -30,8 +30,10 @@ NSString *const ERROR_TITLE = @"Error";
 NSString *const CANCEL_TITLE = @"OK";
 NSString *const WINNER_TITLE = @"Congratulation";
 NSString *const WINNER_MESSAGE= @"Congratulation you complete the game!";
+NSString *const GAME_WON_IMAGE = @"game-won.png";
 NSString *const GAME_OVER_TITLE = @"Game over!";
 NSString *const GAME_OVER_MESSAGE = @"You lose!";
+NSString *const GAME_OVER_IMAGE = @"game-over.png";
 
 
 // Storyboard and views
@@ -46,4 +48,9 @@ NSString *const QUESTION_ANSWER_B = @"answerB";
 NSString *const QUESTION_ANSWER_C = @"answerC";
 NSString *const QUESTION_ANSWER_D = @"answerD";
 NSString *const CLASS_NAME_QUESTION = @"Question";
+
+// Rotation
+const float MATH_PI = 3.14159265358979323846264338327950288;
+
+
 @end

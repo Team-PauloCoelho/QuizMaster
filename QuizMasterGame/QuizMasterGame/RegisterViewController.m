@@ -16,7 +16,6 @@
 
 @implementation RegisterViewController
 
-
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view.
@@ -63,7 +62,7 @@
 
   if (hasError) {
     UIAlertView *validationError =
-        [[UIAlertView alloc] initWithTitle: ERROR_VALIDATION_TITLE
+        [[UIAlertView alloc] initWithTitle:ERROR_VALIDATION_TITLE
                                    message:stringBuilderError
                                   delegate:nil
                          cancelButtonTitle:CANCEL_TITLE
@@ -86,7 +85,7 @@
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
           UIAlertView *success =
-              [[UIAlertView alloc] initWithTitle: SUCCESS_TITLE
+              [[UIAlertView alloc] initWithTitle:SUCCESS_TITLE
                                          message:SUCCESSFUL_REGISTRATION_MESSAGE
                                         delegate:nil
                                cancelButtonTitle:CANCEL_TITLE
@@ -110,7 +109,7 @@
 
 - (BOOL)isValidEmail:(NSString *)checkString {
   BOOL stricterFilter = NO;
-    
+
   NSString *stricterFilterString =
       @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
   NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";

@@ -7,14 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameFinishViewController.h" 
 
-@interface PlayViewController : UIViewController
+@interface PlayViewController : UIViewController<UIAlertViewDelegate>
 @property(weak, nonatomic) IBOutlet UILabel *question;
 @property(weak, nonatomic) IBOutlet UIButton *answerA;
 @property(weak, nonatomic) IBOutlet UIButton *answerB;
 @property(weak, nonatomic) IBOutlet UIButton *answerC;
 @property(weak, nonatomic) IBOutlet UIButton *answerD;
 
+@property GameFinishViewController *gameFinishView;
 @property int points;
 @property NSArray *questions;
 @property int questionNumber;
