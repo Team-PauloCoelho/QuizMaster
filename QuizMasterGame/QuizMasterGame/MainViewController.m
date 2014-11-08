@@ -12,23 +12,23 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Parse/Parse.h>
 #import "Globals.h"
+#import "ConnectionChecker.h"
 
 @interface MainViewController ()
 
-@property (strong, nonatomic) AudioController *audioController;
+@property(strong, nonatomic) AudioController *audioController;
 
 @end
 
 @implementation MainViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.audioController = [[AudioController alloc] init];
-    [self.audioController tryPlayMusic];
+  [super viewDidLoad];
 
+  self.audioController = [[AudioController alloc] init];
+  [self.audioController tryPlayMusic];
 
-  UIImage *imageView = [UIImage imageNamed: BACKGROUND_HOME];
+  UIImage *imageView = [UIImage imageNamed:BACKGROUND_HOME];
 
   UIImageView *backgroundImage =
       [[UIImageView alloc] initWithFrame:self.view.frame];
@@ -37,7 +37,7 @@
   [backgroundImage setContentMode:UIViewContentModeScaleAspectFill];
 
   [self.view insertSubview:backgroundImage atIndex:0];
- }
+}
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
@@ -78,49 +78,54 @@
 
     [validationError show];
   } else {
-    [PFUser
-        logInWithUsernameInBackground:self.username.text
-                             password:self.password.text
-                                block:^(PFUser *user, NSError *error) {
-                                    if (!error) {
-                                      UIStoryboard *storyboard = [UIStoryboard
-                                          storyboardWithName:STORYBOARD_NAME
-                                                      bundle:nil];
-                                        GameViewController *viewController =
-                                        (GameViewController *)[storyboard
-                                                               instantiateViewControllerWithIdentifier:
-                                                               GAME_ID];
-                                        [self presentViewController:viewController
-                                                           animated:YES
-                                                         completion:nil];
-                                    } else {
-                                      NSString *errorString =
-                                          [error userInfo][@"error"];
-                                      UIAlertView *error = [[UIAlertView alloc]
-                                              initWithTitle: ERROR_TITLE
-                                                    message:errorString
-                                                   delegate:nil
-                                          cancelButtonTitle:CANCEL_TITLE
-                                          otherButtonTitles:nil];
+    if ([ConnectionChecker connected]) {
 
-                                      [error show];
-                                    }
-                                }];
+      [PFUser
+          logInWithUsernameInBackground:self.username.text
+                               password:self.password.text
+                                  block:^(PFUser *user, NSError *error) {
+                                      if (!error) {
+                                        UIStoryboard *storyboard = [UIStoryboard
+                                            storyboardWithName:STORYBOARD_NAME
+                                                        bundle:nil];
+                                        GameViewController *viewController =
+                                            (GameViewController *)[storyboard
+                                                instantiateViewControllerWithIdentifier:
+                                                    GAME_ID];
+                                        [self
+                                            presentViewController:viewController
+                                                         animated:YES
+                                                       completion:nil];
+                                      } else {
+                                        NSString *errorString =
+                                            [error userInfo][@"error"];
+                                        UIAlertView *error =
+                                            [[UIAlertView alloc]
+                                                    initWithTitle:ERROR_TITLE
+                                                          message:errorString
+                                                         delegate:nil
+                                                cancelButtonTitle:CANCEL_TITLE
+                                                otherButtonTitles:nil];
+
+                                        [error show];
+                                      }
+                                  }];
+    } else {
+        NSString *errorConnection = MISSING_CONNECTION_ERROR;
+        UIAlertView *error =
+        [[UIAlertView alloc]
+         initWithTitle:ERROR_TITLE
+         message:errorConnection
+         delegate:nil
+         cancelButtonTitle:CANCEL_TITLE
+         otherButtonTitles:nil];
+        
+        [error show];
+    }
   }
 }
 
 - (IBAction)returnToMain:(UIStoryboardSegue *)segue {
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little
-preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

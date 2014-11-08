@@ -34,7 +34,7 @@ NSString *const GAME_WON_IMAGE = @"game-won.png";
 NSString *const GAME_OVER_TITLE = @"Game over!";
 NSString *const GAME_OVER_MESSAGE = @"You lose!";
 NSString *const GAME_OVER_IMAGE = @"game-over.png";
-
+NSString *const MISSING_CONNECTION_ERROR = @"No internet connection" ;
 
 // Storyboard and views
 NSString *const STORYBOARD_NAME = @"Main";

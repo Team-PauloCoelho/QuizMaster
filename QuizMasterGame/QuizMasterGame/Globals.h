@@ -34,7 +34,7 @@ extern NSString *const GAME_WON_IMAGE;
 extern NSString *const GAME_OVER_TITLE;
 extern NSString *const GAME_OVER_MESSAGE;
 extern NSString *const GAME_OVER_IMAGE;
-
+extern NSString *const MISSING_CONNECTION_ERROR;
 
 
 // Storyboard and views

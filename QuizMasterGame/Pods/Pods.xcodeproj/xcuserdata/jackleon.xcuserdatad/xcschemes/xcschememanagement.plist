@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-QuizMasterGame-Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-QuizMasterGame.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>47296ECC10B7019A25CBC61C</key>
+		<key>0D7CA9E5B281489E7901F3CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D7B7ABF4B67D054EE6EEB64</key>
+		<key>327A447414C9761E599F9E3B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C33A99EBFC82CEA7A0565DE</key>
+		<key>7B267E7EAC0A057C234DC1D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>97463050E84E4C135427BF8B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

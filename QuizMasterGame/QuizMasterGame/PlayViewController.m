@@ -22,7 +22,8 @@
       [GameFinishViewController initWithParentView:self andType:YES];
 
   self.points = 0;
-  self.questionNumber = 0;
+  self.questionNumber = 1;
+    self.index= 0;
   [self getAllQuestions];
   [super viewDidLoad];
 }
@@ -33,8 +34,8 @@
 }
 
 - (void)getNextQuestion {
-  if (self.questionNumber < 10) {
-    PFObject *currentQuestionObject = self.questions[self.questionNumber];
+  if (self.questionNumber <= 10) {
+    PFObject *currentQuestionObject = self.questions[self.index];
     self.currentAnswer = [[currentQuestionObject
         objectForKey:QUESTION_CORRECT_ANSWER] integerValue];
 
@@ -53,6 +54,7 @@
         forState:UIControlStateNormal];
 
     ++self.questionNumber;
+      ++self.index;
   } else {
     [self showEndGameScreen];
   }
@@ -172,6 +174,11 @@
   if (sender.state == UIGestureRecognizerStateEnded) {
     [self getNextQuestion];
   }
+}
+
+- (IBAction)tapGesture:(UITapGestureRecognizer *)sender {
+  --self.questionNumber;
+  [self getNextQuestion];
 }
 
 @end

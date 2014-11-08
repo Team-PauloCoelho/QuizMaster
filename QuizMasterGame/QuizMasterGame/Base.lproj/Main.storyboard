@@ -357,6 +357,7 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="q58-j4-OL3" appends="YES" id="GjB-wG-D6T"/>
                             <outletCollection property="gestureRecognizers" destination="jGJ-Vf-KW0" appends="YES" id="YxV-fJ-LHy"/>
+                            <outletCollection property="gestureRecognizers" destination="UMZ-wP-xx3" appends="YES" id="j4E-qu-egA"/>
                         </connections>
                     </view>
                     <connections>
@@ -378,6 +379,11 @@
                         <action selector="rotationGesture:" destination="kXW-3D-DDl" id="gB7-XV-ap4"/>
                     </connections>
                 </rotationGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="UMZ-wP-xx3">
+                    <connections>
+                        <action selector="tapGesture:" destination="kXW-3D-DDl" id="ifQ-bo-ihq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="830" y="-563"/>
         </scene>

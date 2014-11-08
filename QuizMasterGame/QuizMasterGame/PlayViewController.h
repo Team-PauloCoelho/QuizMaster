@@ -18,11 +18,13 @@
 
 - (IBAction)longPressGesture:(UILongPressGestureRecognizer *)sender;
 - (IBAction)rotationGesture:(UIRotationGestureRecognizer *)sender;
+- (IBAction)tapGesture:(UITapGestureRecognizer *)sender;
 
 @property GameFinishViewController *gameFinishView;
 @property int points;
 @property NSArray *questions;
 @property int questionNumber;
+@property int index;
 @property long currentAnswer;
 
 - (void)getNextQuestion;
