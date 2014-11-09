@@ -244,6 +244,35 @@
   }
 }
 
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake) {
+        self.questionNumber = 0;
+        self.questionLabel.text = [NSString stringWithFormat:@"%d", self.questionNumber];
+        self.points = 0;
+        self.pointsLabel.text = [NSString stringWithFormat:@"%d", self.points];
+        
+        
+        [self getNextQuestion];
+        [self showAlertWithTitle: @"restore points and games"
+                      andMessage: @" OKKKK" ];
+    }
+}
+
+
+-(void)showAlertWithTitle:(NSString *)title
+               andMessage:(NSString *)message
+{
+    UIAlertView *alertView = [[UIAlertView alloc]
+                              initWithTitle:title
+                              message:message
+                              delegate:nil
+                              cancelButtonTitle:CANCEL_TITLE
+                              otherButtonTitles:nil];
+    [alertView show];
+}
+
 #pragma marks - Cheat
 - (void)useCheat:(NSString *)type {
   Cheat *cheat =
