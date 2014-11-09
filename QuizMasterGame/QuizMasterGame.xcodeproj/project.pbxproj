@@ -37,6 +37,9 @@
 		579A9F4E1A0F0D1300EAD13A /* long.png in Resources */ = {isa = PBXBuildFile; fileRef = 579A9F4D1A0F0D1300EAD13A /* long.png */; };
 		579A9F501A0F0D1E00EAD13A /* rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 579A9F4F1A0F0D1E00EAD13A /* rotation.png */; };
 		579A9F521A0F0D5300EAD13A /* double.png in Resources */ = {isa = PBXBuildFile; fileRef = 579A9F511A0F0D5300EAD13A /* double.png */; };
+		579D839A1A0FF3F900B01B27 /* 1415581518_Brown_Monsters_14-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 579D83971A0FF3F900B01B27 /* 1415581518_Brown_Monsters_14-01.png */; };
+		579D839B1A0FF3F900B01B27 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 579D83981A0FF3F900B01B27 /* avatar.png */; };
+		579D839C1A0FF3F900B01B27 /* avatr.png in Resources */ = {isa = PBXBuildFile; fileRef = 579D83991A0FF3F900B01B27 /* avatr.png */; };
 		57E50BE11A0B9B9800F088E7 /* orange-button-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BDF1A0B9B9800F088E7 /* orange-button-hi.png */; };
 		57E50BE21A0B9B9800F088E7 /* yellow-rectangle-button-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE01A0B9B9800F088E7 /* yellow-rectangle-button-hi.png */; };
 		57E50BEB1A0B9E7400F088E7 /* 15787_wpm_lowres.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E50BE61A0B9E7400F088E7 /* 15787_wpm_lowres.png */; };
@@ -107,6 +110,9 @@
 		579A9F4D1A0F0D1300EAD13A /* long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = long.png; sourceTree = "<group>"; };
 		579A9F4F1A0F0D1E00EAD13A /* rotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation.png; sourceTree = "<group>"; };
 		579A9F511A0F0D5300EAD13A /* double.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = double.png; sourceTree = "<group>"; };
+		579D83971A0FF3F900B01B27 /* 1415581518_Brown_Monsters_14-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1415581518_Brown_Monsters_14-01.png"; sourceTree = "<group>"; };
+		579D83981A0FF3F900B01B27 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		579D83991A0FF3F900B01B27 /* avatr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatr.png; sourceTree = "<group>"; };
 		57E50BDF1A0B9B9800F088E7 /* orange-button-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange-button-hi.png"; sourceTree = "<group>"; };
 		57E50BE01A0B9B9800F088E7 /* yellow-rectangle-button-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-rectangle-button-hi.png"; sourceTree = "<group>"; };
 		57E50BE61A0B9E7400F088E7 /* 15787_wpm_lowres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15787_wpm_lowres.png; sourceTree = "<group>"; };
@@ -269,6 +275,9 @@
 		5798E5AC1A0A4B6F00D02F40 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				579D83971A0FF3F900B01B27 /* 1415581518_Brown_Monsters_14-01.png */,
+				579D83981A0FF3F900B01B27 /* avatar.png */,
+				579D83991A0FF3F900B01B27 /* avatr.png */,
 				579A9F511A0F0D5300EAD13A /* double.png */,
 				579A9F4F1A0F0D1E00EAD13A /* rotation.png */,
 				579A9F4D1A0F0D1300EAD13A /* long.png */,
@@ -422,12 +431,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				579D839B1A0FF3F900B01B27 /* avatar.png in Resources */,
 				579A9C1F1A0D0CE200E2D8D8 /* game-won.png in Resources */,
 				5798E5B41A0A599300D02F40 /* background.jpg in Resources */,
 				571656711A09185600457F3E /* Main.storyboard in Resources */,
 				574C6A6B1A0BE14300731A9B /* song.mp3 in Resources */,
 				57E50BE11A0B9B9800F088E7 /* orange-button-hi.png in Resources */,
 				5798E5C21A0A71BF00D02F40 /* background-home-1.png in Resources */,
+				579D839A1A0FF3F900B01B27 /* 1415581518_Brown_Monsters_14-01.png in Resources */,
 				579A9F521A0F0D5300EAD13A /* double.png in Resources */,
 				57E50BEC1A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png in Resources */,
 				57E50BEB1A0B9E7400F088E7 /* 15787_wpm_lowres.png in Resources */,
@@ -438,6 +449,7 @@
 				5790CF4E1A0CED74005C18D6 /* game-over.png in Resources */,
 				57E50BE21A0B9B9800F088E7 /* yellow-rectangle-button-hi.png in Resources */,
 				5798E5C61A0A852C00D02F40 /* background-init.png in Resources */,
+				579D839C1A0FF3F900B01B27 /* avatr.png in Resources */,
 				579A9F501A0F0D1E00EAD13A /* rotation.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

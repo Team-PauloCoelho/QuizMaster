@@ -13,13 +13,13 @@
 @interface RegisterViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
-//@property (nonatomic, strong) IBOutlet UIButton *choosePhotoBtn;
-
 @property (weak, nonatomic) IBOutlet UIButton *takePhotoBtn;
 
 @end
 
-@implementation RegisterViewController
+@implementation RegisterViewController {
+    PFFile *avatar;
+}
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -83,9 +83,11 @@
     user.username = self.username.text;
     user.password = self.password.text;
     user.email = self.email.text;
+      
     user[@"games"] = @0;
     user[@"points"] = @0;
-
+    user[@"image"] = avatar;
+      
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
           UIAlertView *success =
@@ -128,19 +130,33 @@
 {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
+    picker.allowsEditing = YES;
+    
     if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]){
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    } else {     picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    } else {
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
-    
+
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    
+    NSData *imageData = UIImagePNGRepresentation(chosenImage);
+
+    avatar = [PFFile fileWithName:@"image123.png" data:imageData];
+    
     [picker dismissViewControllerAnimated:YES completion:NULL];
     self.imageView.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
 }
 
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
 @end

@@ -124,9 +124,6 @@
                                     <segue destination="Kau-74-dCY" kind="unwind" unwindAction="returnToMain:" id="jbx-fM-sUq"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orange-button-hi.png" translatesAutoresizingMaskIntoConstraints="NO" id="iDD-Kr-9dc">
-                                <rect key="frame" x="303" y="427" width="104" height="71"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWe-h5-Wtj">
                                 <rect key="frame" x="194" y="448" width="104" height="30"/>
                                 <state key="normal" title="Picture" backgroundImage="orange-button-hi.png">
@@ -137,6 +134,9 @@
                                     <action selector="getPhoto:" destination="ABo-TX-klD" eventType="touchUpInside" id="v3x-uN-1VU"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="iDD-Kr-9dc">
+                                <rect key="frame" x="303" y="427" width="104" height="75"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.14901961386203766" green="0.12941177189350128" blue="0.38823533058166504" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -772,15 +772,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top players by score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dha-d8-tN0">
-                                <rect key="frame" x="0.0" y="14" width="600" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="Erk-Hm-wkG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIp-Qa-Ohv">
                                 <rect key="frame" x="277" y="513" width="46" height="30"/>
                                 <constraints>
@@ -800,7 +791,7 @@
                                     <constraint firstAttribute="width" constant="331" id="ki6-qq-BwS"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" textLabel="II9-cw-ZQC" detailTextLabel="hWV-2W-Bt6" imageView="Olm-jP-E95" style="IBUITableViewCellStyleSubtitle" id="7Bi-V1-RMk" customClass="CustomTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" textLabel="II9-cw-ZQC" detailTextLabel="hWV-2W-Bt6" imageView="WKo-bU-gY4" style="IBUITableViewCellStyleSubtitle" id="7Bi-V1-RMk" customClass="CustomTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Bi-V1-RMk" id="Ksy-Of-eXS">
@@ -818,7 +809,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="double.png" id="Olm-jP-E95">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="avatr.png" id="WKo-bU-gY4">
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -827,6 +818,15 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top players by score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dha-d8-tN0">
+                                <rect key="frame" x="0.0" y="14" width="600" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Erk-Hm-wkG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -872,6 +872,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="avatar.png" width="128" height="128"/>
+        <image name="avatr.png" width="128" height="128"/>
         <image name="double.png" width="150" height="150"/>
         <image name="long.png" width="150" height="150"/>
         <image name="orange-button-hi.png" width="600" height="181"/>
