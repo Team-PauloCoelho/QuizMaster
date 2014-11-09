@@ -10,7 +10,12 @@
 #import <Parse/Parse.h>
 #import "Globals.h"
 
-@interface RegisterViewController ()
+@interface RegisterViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+//@property (nonatomic, strong) IBOutlet UIButton *choosePhotoBtn;
+
+@property (weak, nonatomic) IBOutlet UIButton *takePhotoBtn;
 
 @end
 
@@ -118,15 +123,24 @@
   return [emailTest evaluateWithObject:checkString];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little
-preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)getPhoto:(id)sender
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]){
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    } else {     picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    }
+    
+    [self presentViewController:picker animated:YES completion:NULL];
 }
-*/
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    self.imageView.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+}
+
 
 @end

@@ -57,6 +57,7 @@ NSString *const CHEAT_CORRECT_ANSWER = @"Correct answer is";
 
 NSString *const CHEAT_CORRECT_ANSWER_LABEL = @"Correct Answer";
 NSString *const CHEAT_NEXT_QUESTION_LABEL = @"Next Question";
-NSString *const CHEAT_CHANGE_QUESTION_LABEL = @"Chnage Question";
+NSString *const CHEAT_CHANGE_QUESTION_LABEL = @"Change Question";
+NSString *const CHEAT_RESET_GAME_LABEL = @"Reset Game";
 
 @end

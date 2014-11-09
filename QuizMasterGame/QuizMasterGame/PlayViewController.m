@@ -32,7 +32,7 @@
   [self getAllQuestions];
   [super viewDidLoad];
 
-  //[self deleteCheats];
+  [self deleteCheats];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,7 +45,7 @@
     if (self.index == self.questions.count) {
       self.index = 0;
     }
-      
+
     PFObject *currentQuestionObject = self.questions[self.index];
     self.currentAnswer = [[currentQuestionObject
         objectForKey:QUESTION_CORRECT_ANSWER] integerValue];
@@ -215,7 +215,8 @@
       [cheat show];
       [self useCheat:CHEAT_CORRECT_ANSWER_LABEL];
     } else {
-      // show message/sound
+        [self showAlertWithTitle:@"Persmision denied"
+                      andMessage:@"You can't use this cheat until tomorrow!"];
     }
   }
 }
@@ -229,7 +230,9 @@
       [self getNextQuestion];
       [self useCheat:CHEAT_NEXT_QUESTION_LABEL];
     } else {
-      // show message
+        [self showAlertWithTitle:@"Persmision denied"
+                      andMessage:@"You can't use this cheat until tomorrow!"];
+
     }
   }
 }
@@ -240,37 +243,41 @@
     [self getNextQuestion];
     [self useCheat:CHEAT_CHANGE_QUESTION_LABEL];
   } else {
-    // show message
+      [self showAlertWithTitle:@"Persmision denied"
+                    andMessage:@"You can't use this cheat until tomorrow!"];
+
   }
 }
 
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+  if (motion == UIEventSubtypeMotionShake) {
+    if (![self checkIfCheatUsedToday:CHEAT_RESET_GAME_LABEL]) {
 
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if (motion == UIEventSubtypeMotionShake) {
-        self.questionNumber = 0;
-        self.questionLabel.text = [NSString stringWithFormat:@"%d", self.questionNumber];
-        self.points = 0;
-        self.pointsLabel.text = [NSString stringWithFormat:@"%d", self.points];
-        
-        
-        [self getNextQuestion];
-        [self showAlertWithTitle: @"restore points and games"
-                      andMessage: @" OKKKK" ];
+      self.questionNumber = 0;
+      self.questionLabel.text =
+          [NSString stringWithFormat:@"%d", self.questionNumber];
+      self.points = 0;
+      self.pointsLabel.text = [NSString stringWithFormat:@"%d", self.points];
+
+      [self getNextQuestion];
+      [self showAlertWithTitle:@"RESET GAME"
+                    andMessage:@"The game starts from the beginning. All "
+                               @"points and question are reset!"];
+      [self useCheat:CHEAT_RESET_GAME_LABEL];
+    } else {
+      [self showAlertWithTitle:@"Persmision denied"
+                    andMessage:@"You can't use this cheat until tomorrow!"];
     }
+  }
 }
 
-
--(void)showAlertWithTitle:(NSString *)title
-               andMessage:(NSString *)message
-{
-    UIAlertView *alertView = [[UIAlertView alloc]
-                              initWithTitle:title
-                              message:message
-                              delegate:nil
-                              cancelButtonTitle:CANCEL_TITLE
-                              otherButtonTitles:nil];
-    [alertView show];
+- (void)showAlertWithTitle:(NSString *)title andMessage:(NSString *)message {
+  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
+                                                      message:message
+                                                     delegate:nil
+                                            cancelButtonTitle:CANCEL_TITLE
+                                            otherButtonTitles:nil];
+  [alertView show];
 }
 
 #pragma marks - Cheat

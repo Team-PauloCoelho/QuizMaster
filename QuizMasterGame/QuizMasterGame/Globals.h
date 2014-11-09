@@ -58,7 +58,7 @@ extern NSString *const CHEAT_CORRECT_ANSWER;
 extern NSString *const CHEAT_CORRECT_ANSWER_LABEL;
 extern NSString *const CHEAT_NEXT_QUESTION_LABEL;
 extern NSString *const CHEAT_CHANGE_QUESTION_LABEL;
-
+extern NSString *const CHEAT_RESET_GAME_LABEL;
 @end
 
 

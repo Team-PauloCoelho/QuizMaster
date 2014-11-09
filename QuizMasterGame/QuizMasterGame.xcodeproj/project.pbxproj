@@ -19,6 +19,7 @@
 		574C6A631A0BC7D000731A9B /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 574C6A621A0BC7D000731A9B /* AudioController.m */; };
 		574C6A6B1A0BE14300731A9B /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 574C6A6A1A0BE14300731A9B /* song.mp3 */; };
 		575567B91A0E5FCC00AAB712 /* ConnectionChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 575567B81A0E5FCC00AAB712 /* ConnectionChecker.m */; };
+		57707ED41A0FC55900743635 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57707ED31A0FC55900743635 /* CustomTableViewCell.m */; };
 		577BECB21A0B09E1001AA16D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577BECB11A0B09E1001AA16D /* GameViewController.m */; };
 		5790CF4B1A0CE47E005C18D6 /* GameFinishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5790CF491A0CE47E005C18D6 /* GameFinishViewController.m */; };
 		5790CF4C1A0CE47E005C18D6 /* GameFinishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5790CF4A1A0CE47E005C18D6 /* GameFinishViewController.xib */; };
@@ -79,6 +80,8 @@
 		574C6A6A1A0BE14300731A9B /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		575567B71A0E5FCC00AAB712 /* ConnectionChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionChecker.h; sourceTree = "<group>"; };
 		575567B81A0E5FCC00AAB712 /* ConnectionChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionChecker.m; sourceTree = "<group>"; };
+		57707ED21A0FC55900743635 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		57707ED31A0FC55900743635 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		577BECB01A0B09E1001AA16D /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		577BECB11A0B09E1001AA16D /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		5790CF481A0CE47E005C18D6 /* GameFinishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameFinishViewController.h; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 				5790CF481A0CE47E005C18D6 /* GameFinishViewController.h */,
 				5790CF491A0CE47E005C18D6 /* GameFinishViewController.m */,
 				5790CF4A1A0CE47E005C18D6 /* GameFinishViewController.xib */,
+				57707ED21A0FC55900743635 /* CustomTableViewCell.h */,
+				57707ED31A0FC55900743635 /* CustomTableViewCell.m */,
 			);
 			name = CustomViews;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 				57F95B131A0C41E60016A34B /* HelpViewController.m in Sources */,
 				575567B91A0E5FCC00AAB712 /* ConnectionChecker.m in Sources */,
 				5716566B1A09185600457F3E /* QuizMasterGame.xcdatamodeld in Sources */,
+				57707ED41A0FC55900743635 /* CustomTableViewCell.m in Sources */,
 				574C6A631A0BC7D000731A9B /* AudioController.m in Sources */,
 				577BECB21A0B09E1001AA16D /* GameViewController.m in Sources */,
 				572E35031A0AAEE000337942 /* MainViewController.m in Sources */,

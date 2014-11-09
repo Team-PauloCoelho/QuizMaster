@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "327A447414C9761E599F9E3B"
+               BlueprintIdentifier = "111807478D34DADA506C15D1"
                BuildableName = "libPods-QuizMasterGame.a"
                BlueprintName = "Pods-QuizMasterGame"
                ReferencedContainer = "container:Pods.xcodeproj">

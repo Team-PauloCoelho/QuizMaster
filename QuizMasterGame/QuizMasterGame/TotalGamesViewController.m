@@ -8,6 +8,8 @@
 
 #import "TotalGamesViewController.h"
 #import <Parse/Parse.h>
+#import "UIImageView+WebCache.h"
+#import "CustomTableViewCell.h"
 
 @interface TotalGamesViewController ()
 
@@ -96,28 +98,34 @@
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   static NSString *cellIdentifier = @"CellGames";
 
-  UITableViewCell *cell =
-      [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-
-  if (cell == nil) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                  reuseIdentifier:cellIdentifier];
-  }
-  NSMutableString *cellContent = [NSMutableString string];
-
-  PFUser *userData =
-      (PFUser *)[self.usersDataGames objectAtIndex:indexPath.row];
-
-  NSString *points =
-      [NSString stringWithFormat:@"%@", [userData objectForKey:@"games"]];
-
-  [cellContent appendString:points];
-
-  [cellContent appendString:@" "];
-
-  [cellContent appendString:userData.username];
-
-  cell.textLabel.text = cellContent;
+    CustomTableViewCell *cell =
+    [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                          reuseIdentifier:cellIdentifier];
+    }
+    
+    PFUser *userData = (PFUser *)[self.usersDataGames objectAtIndex:indexPath.row];
+    
+    // Image
+    PFFile *imageFile = [userData objectForKey:@"image"];
+    
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageFile.url]
+                      placeholderImage:[UIImage imageNamed:@"long.png"]];
+    
+    cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    // Label
+    NSMutableString *cellContent = [NSMutableString string];
+    
+    NSString *points = [NSString stringWithFormat:@"%@ %@", [userData objectForKey:@"games"], @"games"];
+    
+    [cellContent appendFormat:@"%ld. %@", (long)indexPath.row + 1, userData.username];
+    
+    
+    cell.textLabel.text = cellContent;
+    cell.detailTextLabel.text = points;
   return cell;
 }
 
