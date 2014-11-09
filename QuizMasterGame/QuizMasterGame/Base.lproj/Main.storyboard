@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9uu-Gp-KAs">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -233,7 +233,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0039215688593685627" green="0.023529414087533951" blue="0.035294119268655777" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.1411764771" green="0.1019607931" blue="0.38823533059999998" alpha="1" colorSpace="deviceRGB"/>
                         <color key="tintColor" red="0.019607843831181526" green="0.098039224743843079" blue="0.12156863510608673" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="5da-et-mSE" firstAttribute="leading" secondItem="qAp-8K-HTd" secondAttribute="leading" id="CvZ-Zf-zi6"/>
@@ -438,6 +438,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTf-Jq-BjJ">
+                                <rect key="frame" x="178" y="491" width="245" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="fNS-Dr-QGO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="How to play" backgroundImage="orange-button-hi.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.40000003579999999" green="0.91372555489999996" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9uu-Gp-KAs" kind="show" id="Zeb-DE-1eX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgg-s2-cLO">
+                                <rect key="frame" x="178" y="352" width="245" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="6P8-rx-t7b"/>
+                                    <constraint firstAttribute="width" constant="245" id="6Uk-71-C2b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Play" backgroundImage="orange-button-hi.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kXW-3D-DDl" kind="show" id="dK8-ko-VeW"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbF-9P-cSm">
                                 <rect key="frame" x="178" y="424" width="245" height="35"/>
                                 <constraints>
@@ -449,42 +479,8 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.40000003579999999" green="0.91372555489999996" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
-                                <state key="highlighted" title="Sign In"/>
                                 <connections>
                                     <segue destination="htx-oT-0j3" kind="show" id="N9l-M7-HZB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTf-Jq-BjJ">
-                                <rect key="frame" x="178" y="506" width="245" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="fNS-Dr-QGO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="How to play" backgroundImage="orange-button-hi.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.40000003579999999" green="0.91372555489999996" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <state key="highlighted" title="Sign In"/>
-                                <connections>
-                                    <segue destination="9uu-Gp-KAs" kind="show" id="Zeb-DE-1eX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgg-s2-cLO">
-                                <rect key="frame" x="178" y="343" width="245" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="6P8-rx-t7b"/>
-                                    <constraint firstAttribute="width" constant="245" id="6Uk-71-C2b"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Play" backgroundImage="orange-button-hi.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.40000003579999999" green="0.91372555489999996" blue="0.27843138579999999" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <state key="highlighted" title="Sign In"/>
-                                <connections>
-                                    <segue destination="kXW-3D-DDl" kind="show" id="dK8-ko-VeW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -493,11 +489,11 @@
                             <constraint firstItem="hgg-s2-cLO" firstAttribute="leading" secondItem="BbF-9P-cSm" secondAttribute="leading" id="A6K-vp-Kq9"/>
                             <constraint firstItem="FTf-Jq-BjJ" firstAttribute="leading" secondItem="BbF-9P-cSm" secondAttribute="leading" id="AZf-Ww-8FR"/>
                             <constraint firstItem="FTf-Jq-BjJ" firstAttribute="trailing" secondItem="BbF-9P-cSm" secondAttribute="trailing" id="FTr-Zn-1JO"/>
-                            <constraint firstItem="FTf-Jq-BjJ" firstAttribute="top" secondItem="BbF-9P-cSm" secondAttribute="bottom" constant="47" id="GYu-3G-Wvh"/>
-                            <constraint firstItem="BbF-9P-cSm" firstAttribute="top" secondItem="hgg-s2-cLO" secondAttribute="bottom" constant="47" id="Z0W-Rd-yuS"/>
+                            <constraint firstItem="FTf-Jq-BjJ" firstAttribute="top" secondItem="BbF-9P-cSm" secondAttribute="bottom" constant="32" id="GYu-3G-Wvh"/>
+                            <constraint firstItem="BbF-9P-cSm" firstAttribute="top" secondItem="hgg-s2-cLO" secondAttribute="bottom" constant="37" id="Z0W-Rd-yuS"/>
                             <constraint firstItem="BbF-9P-cSm" firstAttribute="centerX" secondItem="AzO-8t-Qmo" secondAttribute="centerX" id="emu-hz-Jal"/>
                             <constraint firstItem="hgg-s2-cLO" firstAttribute="trailing" secondItem="BbF-9P-cSm" secondAttribute="trailing" id="phs-FM-SbR"/>
-                            <constraint firstItem="fsL-mJ-8Xd" firstAttribute="top" secondItem="FTf-Jq-BjJ" secondAttribute="bottom" constant="59" id="wLo-9U-NuJ"/>
+                            <constraint firstItem="fsL-mJ-8Xd" firstAttribute="top" secondItem="FTf-Jq-BjJ" secondAttribute="bottom" constant="74" id="wLo-9U-NuJ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -505,7 +501,7 @@
             </objects>
             <point key="canvasLocation" x="830" y="152"/>
         </scene>
-        <!--Item 2-->
+        <!--By Games-->
         <scene sceneID="waM-cr-CW8">
             <objects>
                 <viewController id="bCm-0V-iNf" customClass="TotalGamesViewController" sceneMemberID="viewController">
@@ -517,33 +513,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Top players by games" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozQ-yD-psY">
-                                <rect key="frame" x="16" y="20" width="584" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="fNy-mY-gIA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsm-QA-FMz">
-                                <rect key="frame" x="285" y="513" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="6Oq-JQ-xbO"/>
-                                </constraints>
-                                <state key="normal" title="Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="7MI-j7-l7r" kind="unwind" unwindAction="returnToGame:" id="VZG-wY-Mo7"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="l4C-T8-0ZL">
-                                <rect key="frame" x="126" y="73" width="349" height="360"/>
+                            <tableView clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="l4C-T8-0ZL">
+                                <rect key="frame" x="16" y="78" width="568" height="427"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="349" id="Hv3-ub-X29"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellGames" textLabel="lme-g7-fk3" detailTextLabel="ofd-Za-Ehd" imageView="1fL-1P-Lc7" style="IBUITableViewCellStyleSubtitle" id="YH1-6Y-sbn" customClass="CustomTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="349" height="44"/>
@@ -563,7 +535,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="long.png" id="1fL-1P-Lc7">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="avatr.png" id="1fL-1P-Lc7">
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -572,20 +544,44 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsm-QA-FMz">
+                                <rect key="frame" x="241" y="513" width="118" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="6Oq-JQ-xbO"/>
+                                    <constraint firstAttribute="height" constant="30" id="abu-Jg-AnE"/>
+                                </constraints>
+                                <state key="normal" title="Back" backgroundImage="orange-button-hi.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7MI-j7-l7r" kind="unwind" unwindAction="returnToGame:" id="VZG-wY-Mo7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top players by games" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozQ-yD-psY">
+                                <rect key="frame" x="16" y="20" width="568" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fNy-mY-gIA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1411764771" green="0.1019607931" blue="0.38823533059999998" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="Xsm-QA-FMz" firstAttribute="top" secondItem="l4C-T8-0ZL" secondAttribute="bottom" constant="38" id="0ZA-2q-vFQ"/>
+                            <constraint firstItem="Xsm-QA-FMz" firstAttribute="top" secondItem="l4C-T8-0ZL" secondAttribute="bottom" constant="8" id="0ZA-2q-vFQ"/>
                             <constraint firstItem="6uA-CA-Rou" firstAttribute="top" secondItem="Xsm-QA-FMz" secondAttribute="bottom" constant="8" symbolic="YES" id="5YG-tw-MPG"/>
                             <constraint firstItem="l4C-T8-0ZL" firstAttribute="centerX" secondItem="VUg-Qc-owj" secondAttribute="centerX" id="6Wq-Im-lsY"/>
                             <constraint firstItem="Xsm-QA-FMz" firstAttribute="centerX" secondItem="ozQ-yD-psY" secondAttribute="centerX" id="BqA-8Y-AQE"/>
-                            <constraint firstAttribute="trailing" secondItem="ozQ-yD-psY" secondAttribute="trailing" id="hcK-SL-QSb"/>
-                            <constraint firstItem="ozQ-yD-psY" firstAttribute="top" secondItem="dop-EV-zSa" secondAttribute="bottom" constant="8" symbolic="YES" id="l6b-bb-b98"/>
+                            <constraint firstAttribute="trailing" secondItem="ozQ-yD-psY" secondAttribute="trailing" constant="16" id="hcK-SL-QSb"/>
+                            <constraint firstItem="ozQ-yD-psY" firstAttribute="top" secondItem="dop-EV-zSa" secondAttribute="bottom" id="l6b-bb-b98"/>
                             <constraint firstItem="ozQ-yD-psY" firstAttribute="leading" secondItem="VUg-Qc-owj" secondAttribute="leadingMargin" id="owQ-Zz-hCd"/>
-                            <constraint firstItem="l4C-T8-0ZL" firstAttribute="top" secondItem="ozQ-yD-psY" secondAttribute="bottom" constant="42" id="vpj-dZ-y0U"/>
+                            <constraint firstItem="l4C-T8-0ZL" firstAttribute="top" secondItem="ozQ-yD-psY" secondAttribute="bottom" constant="8" id="vpj-dZ-y0U"/>
+                            <constraint firstItem="l4C-T8-0ZL" firstAttribute="leading" secondItem="ozQ-yD-psY" secondAttribute="leading" id="yDl-AI-fpp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Alt-hJ-TfT"/>
+                    <tabBarItem key="tabBarItem" title="By Games" image="mobile.png" id="Alt-hJ-TfT"/>
                     <connections>
                         <outlet property="tableViewGames" destination="l4C-T8-0ZL" id="2gZ-Pq-T7s"/>
                     </connections>
@@ -738,7 +734,7 @@
             </objects>
             <point key="canvasLocation" x="989" y="858"/>
         </scene>
-        <!--Item 1-->
+        <!--By Score-->
         <scene sceneID="YYH-2E-kIo">
             <objects>
                 <viewController id="dp2-AF-zND" customClass="TotalPointsViewController" sceneMemberID="viewController">
@@ -751,25 +747,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIp-Qa-Ohv">
-                                <rect key="frame" x="277" y="513" width="46" height="30"/>
+                                <rect key="frame" x="241" y="513" width="118" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="S8v-uz-unK"/>
+                                    <constraint firstAttribute="height" constant="30" id="kJY-eF-iIK"/>
+                                    <constraint firstAttribute="width" constant="118" id="mmE-T0-NQx"/>
                                 </constraints>
-                                <state key="normal" title="Back">
+                                <state key="normal" title="Back" backgroundImage="orange-button-hi.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="7Yl-eB-qc4" kind="unwind" unwindAction="returnToGame:" id="e9G-uk-I6a"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sh5-6V-Nhf">
-                                <rect key="frame" x="135" y="74" width="331" height="415"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top players by score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dha-d8-tN0">
+                                <rect key="frame" x="16" y="20" width="568" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="331" id="ki6-qq-BwS"/>
+                                    <constraint firstAttribute="height" constant="50" id="avb-y5-obo"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sh5-6V-Nhf">
+                                <rect key="frame" x="16" y="78" width="568" height="427"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" textLabel="II9-cw-ZQC" detailTextLabel="hWV-2W-Bt6" imageView="WKo-bU-gY4" style="IBUITableViewCellStyleSubtitle" id="7Bi-V1-RMk" customClass="CustomTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="II9-cw-ZQC" detailTextLabel="hWV-2W-Bt6" imageView="WKo-bU-gY4" style="IBUITableViewCellStyleSubtitle" id="7Bi-V1-RMk" customClass="CustomTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Bi-V1-RMk" id="Ksy-Of-eXS">
@@ -796,29 +799,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top players by score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dha-d8-tN0">
-                                <rect key="frame" x="0.0" y="14" width="600" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="Erk-Hm-wkG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1411764771" green="0.1019607931" blue="0.38823533059999998" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="sh5-6V-Nhf" firstAttribute="top" secondItem="dha-d8-tN0" secondAttribute="bottom" constant="23" id="5QZ-nC-KTY"/>
-                            <constraint firstAttribute="trailing" secondItem="dha-d8-tN0" secondAttribute="trailing" id="Bp1-2u-AKb"/>
-                            <constraint firstItem="sh5-6V-Nhf" firstAttribute="centerX" secondItem="dha-d8-tN0" secondAttribute="centerX" id="CHz-FD-Zx2"/>
-                            <constraint firstItem="dha-d8-tN0" firstAttribute="top" secondItem="Top-gr-gOx" secondAttribute="topMargin" constant="14" id="Pq9-oC-zfq"/>
-                            <constraint firstItem="xrH-nv-O0I" firstAttribute="top" secondItem="gIp-Qa-Ohv" secondAttribute="bottom" constant="8" symbolic="YES" id="SDI-kD-CH4"/>
-                            <constraint firstItem="sh5-6V-Nhf" firstAttribute="centerX" secondItem="gIp-Qa-Ohv" secondAttribute="centerX" id="UAJ-6J-5mJ"/>
-                            <constraint firstItem="dha-d8-tN0" firstAttribute="leading" secondItem="Top-gr-gOx" secondAttribute="leading" id="fmW-ok-LW0"/>
-                            <constraint firstItem="gIp-Qa-Ohv" firstAttribute="top" secondItem="sh5-6V-Nhf" secondAttribute="bottom" constant="24" id="n34-5B-TMI"/>
+                            <constraint firstItem="dha-d8-tN0" firstAttribute="top" secondItem="Jk2-uh-kij" secondAttribute="bottom" id="4Tg-Sw-pqQ"/>
+                            <constraint firstItem="sh5-6V-Nhf" firstAttribute="top" secondItem="dha-d8-tN0" secondAttribute="bottom" constant="8" symbolic="YES" id="Hcs-1w-OGD"/>
+                            <constraint firstItem="xrH-nv-O0I" firstAttribute="top" secondItem="gIp-Qa-Ohv" secondAttribute="bottom" constant="8" symbolic="YES" id="P4g-zc-FKp"/>
+                            <constraint firstItem="gIp-Qa-Ohv" firstAttribute="top" secondItem="sh5-6V-Nhf" secondAttribute="bottom" constant="8" symbolic="YES" id="QVO-RP-hVI"/>
+                            <constraint firstItem="sh5-6V-Nhf" firstAttribute="trailing" secondItem="Top-gr-gOx" secondAttribute="trailingMargin" id="Tua-sY-Afy"/>
+                            <constraint firstItem="gIp-Qa-Ohv" firstAttribute="centerX" secondItem="sh5-6V-Nhf" secondAttribute="centerX" id="bP5-Rk-b5U"/>
+                            <constraint firstItem="sh5-6V-Nhf" firstAttribute="leading" secondItem="Top-gr-gOx" secondAttribute="leadingMargin" id="hFg-Z0-MLh"/>
+                            <constraint firstItem="sh5-6V-Nhf" firstAttribute="leading" secondItem="dha-d8-tN0" secondAttribute="leading" id="vKb-Ez-gIa"/>
+                            <constraint firstItem="sh5-6V-Nhf" firstAttribute="trailing" secondItem="dha-d8-tN0" secondAttribute="trailing" id="ype-be-3lh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="oBa-bU-Ozc"/>
+                    <tabBarItem key="tabBarItem" title="By Score" image="crown.png" id="oBa-bU-Ozc">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="sh5-6V-Nhf" id="MLZ-Fd-Ev3"/>
                     </connections>
@@ -833,10 +830,13 @@
             <objects>
                 <tabBarController id="htx-oT-0j3" customClass="RankingViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="Inx-4l-9YW">
+                    <tabBar key="tabBar" clipsSubviews="YES" contentMode="scaleToFill" id="Inx-4l-9YW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.84212566919426957" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.2941176593" green="0.95686280729999995" blue="0.96470594409999999" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="barTintColor" red="0.14901961389999999" green="0.1294117719" blue="0.38823533059999998" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <outlet property="tabBarController" destination="Inx-4l-9YW" id="12a-xa-fq2"/>
@@ -852,8 +852,10 @@
     <resources>
         <image name="avatar.png" width="128" height="128"/>
         <image name="avatr.png" width="128" height="128"/>
+        <image name="crown.png" width="30" height="30"/>
         <image name="double.png" width="150" height="150"/>
         <image name="long.png" width="150" height="150"/>
+        <image name="mobile.png" width="30" height="30"/>
         <image name="orange-button-hi.png" width="600" height="181"/>
         <image name="rotation.png" width="150" height="150"/>
     </resources>

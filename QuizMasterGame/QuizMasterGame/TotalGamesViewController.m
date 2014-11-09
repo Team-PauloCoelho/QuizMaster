@@ -112,7 +112,7 @@
     PFFile *imageFile = [userData objectForKey:@"image"];
     
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageFile.url]
-                      placeholderImage:[UIImage imageNamed:@"long.png"]];
+                      placeholderImage:[UIImage imageNamed:@"avatr.png"]];
     
     cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
     
