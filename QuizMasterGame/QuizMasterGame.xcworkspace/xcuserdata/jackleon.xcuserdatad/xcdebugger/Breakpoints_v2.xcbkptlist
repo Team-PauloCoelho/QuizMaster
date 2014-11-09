@@ -86,13 +86,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QuizMasterGame/PlayViewController.m"
-            timestampString = "437054110.706915"
+            timestampString = "437183124.318493"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "@interface PlayViewController()"
-            landmarkType = "2">
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "cdHelper"
+            landmarkType = "19">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -109,22 +109,6 @@
             endingLineNumber = "14"
             landmarkName = "parentViewController"
             landmarkType = "19">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QuizMasterGame/Globals.m"
-            timestampString = "437063760.21375"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "@implementation Globals"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -294,12 +278,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QuizMasterGame/PlayViewController.m"
-            timestampString = "437148054.764924"
+            timestampString = "437187558.621389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "-tapGesture:"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-getAllQuestions"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

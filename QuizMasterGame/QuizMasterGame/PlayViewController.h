@@ -15,6 +15,8 @@
 @property(weak, nonatomic) IBOutlet UIButton *answerB;
 @property(weak, nonatomic) IBOutlet UIButton *answerC;
 @property(weak, nonatomic) IBOutlet UIButton *answerD;
+@property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 
 - (IBAction)longPressGesture:(UILongPressGestureRecognizer *)sender;
 - (IBAction)rotationGesture:(UIRotationGestureRecognizer *)sender;

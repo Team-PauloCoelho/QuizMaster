@@ -9,32 +9,43 @@
 #import "PlayViewController.h"
 #import <Parse/Parse.h>
 #import "Globals.h"
+#import "CoreDataHelper.h"
+#import "Cheat.h"
 
 @interface PlayViewController ()
-
+@property(nonatomic, strong) CoreDataHelper *cdHelper;
 @end
 
 @implementation PlayViewController
 
 - (void)viewDidLoad {
+  _cdHelper = [[CoreDataHelper alloc] init];
+  [_cdHelper setupCoreData];
 
   self.gameFinishView =
       [GameFinishViewController initWithParentView:self andType:YES];
 
   self.points = 0;
-  self.questionNumber = 1;
-    self.index= 0;
+  self.questionNumber = 0;
+  self.index = 0;
+  self.pointsLabel.text = [NSString stringWithFormat:@"%d", self.points];
   [self getAllQuestions];
   [super viewDidLoad];
+
+  //[self deleteCheats];
 }
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
 }
 
+#pragma marks - Questions
 - (void)getNextQuestion {
-  if (self.questionNumber <= 10) {
+  if (self.questionNumber < 10) {
+    if (self.index == self.questions.count) {
+      self.index = 0;
+    }
+      
     PFObject *currentQuestionObject = self.questions[self.index];
     self.currentAnswer = [[currentQuestionObject
         objectForKey:QUESTION_CORRECT_ANSWER] integerValue];
@@ -54,7 +65,10 @@
         forState:UIControlStateNormal];
 
     ++self.questionNumber;
-      ++self.index;
+    ++self.index;
+
+    self.questionLabel.text =
+        [NSString stringWithFormat:@"#%d", self.questionNumber];
   } else {
     [self showEndGameScreen];
   }
@@ -66,7 +80,7 @@
       if (!error) {
 
         self.questions = objects;
-
+        self.index = arc4random() % self.questions.count;
         [self getNextQuestion];
       } else {
         NSString *errorString = [error userInfo][@"error"];
@@ -81,6 +95,7 @@
   }];
 }
 
+#pragma marks - Answer buttons tapped
 - (IBAction)answerATouched:(UIButton *)sender {
   [self handleAnswer:1];
 }
@@ -100,6 +115,7 @@
 - (void)handleAnswer:(int)answer {
   if ([self checkAnswer:answer]) {
     ++self.points;
+    self.pointsLabel.text = [NSString stringWithFormat:@"%d", self.points];
     [self getNextQuestion];
   } else {
     [self showGameOverScreen];
@@ -115,6 +131,7 @@
 }
 
 - (void)showEndGameScreen {
+  [self saveUserPoints];
   self.gameFinishView.isGameOver = NO;
   [self.gameFinishView showOnScreen];
   UIAlertView *winnerMessage = [[UIAlertView alloc] initWithTitle:WINNER_TITLE
@@ -127,7 +144,7 @@
 }
 
 - (void)showGameOverScreen {
-
+  [self saveUserPoints];
   self.gameFinishView.isGameOver = YES;
   [self.gameFinishView showOnScreen];
   UIAlertView *error = [[UIAlertView alloc] initWithTitle:GAME_OVER_TITLE
@@ -139,6 +156,28 @@
   [error show];
 }
 
+- (void)saveUserPoints {
+  PFUser *currentUser = [PFUser currentUser];
+  if (currentUser) {
+    long userNewPoints = [[currentUser objectForKey:@"points"] integerValue];
+    userNewPoints += self.points;
+    long userNewGames = [[currentUser objectForKey:@"games"] integerValue];
+
+    userNewGames++;
+
+    currentUser[@"points"] = [NSNumber numberWithLong:userNewPoints];
+    currentUser[@"games"] = [NSNumber numberWithLong:userNewGames];
+    [currentUser saveInBackground];
+  } else {
+    UIAlertView *cheat = [[UIAlertView alloc] initWithTitle:ERROR_TITLE
+                                                    message:@"Unknown user"
+                                                   delegate:nil
+                                          cancelButtonTitle:CANCEL_TITLE
+                                          otherButtonTitles:nil];
+    [cheat show];
+  }
+}
+
 - (void)alertView:(UIAlertView *)alertView
     clickedButtonAtIndex:(NSInteger)buttonIndex {
   [self.gameFinishView hideFromScreen];
@@ -146,39 +185,107 @@
   [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma marks - Gestures
 - (IBAction)longPressGesture:(UILongPressGestureRecognizer *)sender {
   if (sender.state == UIGestureRecognizerStateEnded) {
-    NSString *answer;
+    if (![self checkIfCheatUsedToday:CHEAT_CORRECT_ANSWER_LABEL]) {
 
-    if (self.currentAnswer == 1) {
-      answer = self.answerA.titleLabel.text;
-    } else if (self.currentAnswer == 2) {
-      answer = self.answerB.titleLabel.text;
-    } else if (self.currentAnswer == 3) {
-      answer = self.answerC.titleLabel.text;
-    } else if (self.currentAnswer == 4) {
-      answer = self.answerD.titleLabel.text;
+      --self.points;
+      self.pointsLabel.text = [NSString stringWithFormat:@"%d", self.points];
+
+      NSString *answer;
+
+      if (self.currentAnswer == 1) {
+        answer = self.answerA.titleLabel.text;
+      } else if (self.currentAnswer == 2) {
+        answer = self.answerB.titleLabel.text;
+      } else if (self.currentAnswer == 3) {
+        answer = self.answerC.titleLabel.text;
+      } else if (self.currentAnswer == 4) {
+        answer = self.answerD.titleLabel.text;
+      }
+
+      UIAlertView *cheat =
+          [[UIAlertView alloc] initWithTitle:CHEAT_CORRECT_ANSWER
+                                     message:answer
+                                    delegate:nil
+                           cancelButtonTitle:CANCEL_TITLE
+                           otherButtonTitles:nil];
+
+      [cheat show];
+      [self useCheat:CHEAT_CORRECT_ANSWER_LABEL];
+    } else {
+      // show message/sound
     }
-
-    UIAlertView *cheat = [[UIAlertView alloc] initWithTitle:CHEAT_CORRECT_ANSWER
-                                                    message:answer
-                                                   delegate:nil
-                                          cancelButtonTitle:CANCEL_TITLE
-                                          otherButtonTitles:nil];
-
-    [cheat show];
   }
 }
 
 - (IBAction)rotationGesture:(UIRotationGestureRecognizer *)sender {
   if (sender.state == UIGestureRecognizerStateEnded) {
-    [self getNextQuestion];
+    if (![self checkIfCheatUsedToday:CHEAT_NEXT_QUESTION_LABEL]) {
+
+      --self.points;
+      self.pointsLabel.text = [NSString stringWithFormat:@"%d", self.points];
+      [self getNextQuestion];
+      [self useCheat:CHEAT_NEXT_QUESTION_LABEL];
+    } else {
+      // show message
+    }
   }
 }
 
 - (IBAction)tapGesture:(UITapGestureRecognizer *)sender {
-  --self.questionNumber;
-  [self getNextQuestion];
+  if (![self checkIfCheatUsedToday:CHEAT_CHANGE_QUESTION_LABEL]) {
+    --self.questionNumber;
+    [self getNextQuestion];
+    [self useCheat:CHEAT_CHANGE_QUESTION_LABEL];
+  } else {
+    // show message
+  }
+}
+
+#pragma marks - Cheat
+- (void)useCheat:(NSString *)type {
+  Cheat *cheat =
+      [NSEntityDescription insertNewObjectForEntityForName:@"Cheat"
+                                    inManagedObjectContext:_cdHelper.context];
+  cheat.type = type;
+  cheat.date = [NSDate date];
+
+  [_cdHelper.context insertObject:cheat];
+
+  [self.cdHelper saveContext];
+}
+
+- (BOOL)checkIfCheatUsedToday:(NSString *)type {
+  BOOL isUsedToday = NO;
+
+  NSFetchRequest *request =
+      [NSFetchRequest fetchRequestWithEntityName:@"Cheat"];
+  [request setPredicate:[NSPredicate predicateWithFormat:@"type == %@", type]];
+
+  NSArray *fetchedObjects =
+      [_cdHelper.context executeFetchRequest:request error:nil];
+
+  if (fetchedObjects.count != 0) {
+    isUsedToday = YES;
+  }
+
+  return isUsedToday;
+}
+
+- (void)deleteCheats {
+  NSFetchRequest *allCheats = [[NSFetchRequest alloc] init];
+  [allCheats setEntity:[NSEntityDescription entityForName:@"Cheat"
+                                   inManagedObjectContext:_cdHelper.context]];
+  [allCheats setIncludesPropertyValues:NO];
+  NSError *error = nil;
+  NSArray *cheats =
+      [_cdHelper.context executeFetchRequest:allCheats error:&error];
+
+  for (NSManagedObject *cheat in cheats) {
+    [_cdHelper.context deleteObject:cheat];
+  }
 }
 
 @end

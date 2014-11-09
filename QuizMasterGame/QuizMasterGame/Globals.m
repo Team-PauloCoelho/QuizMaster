@@ -29,12 +29,12 @@ NSString *const SUCCESSFUL_REGISTRATION_MESSAGE = @"Successful registration!";
 NSString *const ERROR_TITLE = @"Error";
 NSString *const CANCEL_TITLE = @"OK";
 NSString *const WINNER_TITLE = @"Congratulation";
-NSString *const WINNER_MESSAGE= @"Congratulation you complete the game!";
+NSString *const WINNER_MESSAGE = @"Congratulation you complete the game!";
 NSString *const GAME_WON_IMAGE = @"game-won.png";
 NSString *const GAME_OVER_TITLE = @"Game over!";
 NSString *const GAME_OVER_MESSAGE = @"You lose!";
 NSString *const GAME_OVER_IMAGE = @"game-over.png";
-NSString *const MISSING_CONNECTION_ERROR = @"No internet connection" ;
+NSString *const MISSING_CONNECTION_ERROR = @"No internet connection";
 
 // Storyboard and views
 NSString *const STORYBOARD_NAME = @"Main";
@@ -53,6 +53,10 @@ NSString *const CLASS_NAME_QUESTION = @"Question";
 const float MATH_PI = 3.14159265358979323846264338327950288;
 
 // Cheats
-NSString *const CHEAT_CORRECT_ANSWER = @"Correct answer CHEAT";
+NSString *const CHEAT_CORRECT_ANSWER = @"Correct answer is";
+
+NSString *const CHEAT_CORRECT_ANSWER_LABEL = @"Correct Answer";
+NSString *const CHEAT_NEXT_QUESTION_LABEL = @"Next Question";
+NSString *const CHEAT_CHANGE_QUESTION_LABEL = @"Chnage Question";
 
 @end
