@@ -33,7 +33,7 @@
       [NSString stringWithFormat:@"Points: %d", self.points];
   [self getAllQuestions];
     [self roundImageCorners];
-  [self deleteCheats];
+//  [self deleteCheats];
   [self checkAllBonusses];
 
   [super viewDidLoad];
