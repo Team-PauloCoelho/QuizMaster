@@ -10,15 +10,16 @@
 #import <Parse/Parse.h>
 #import "Globals.h"
 
-@interface RegisterViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@interface RegisterViewController () <UIImagePickerControllerDelegate,
+                                      UINavigationControllerDelegate>
+@property(weak, nonatomic) IBOutlet UIImageView *imageView;
 
-@property (weak, nonatomic) IBOutlet UIButton *takePhotoBtn;
+@property(weak, nonatomic) IBOutlet UIButton *takePhotoBtn;
 
 @end
 
 @implementation RegisterViewController {
-    PFFile *avatar;
+  PFFile *avatar;
 }
 
 - (void)viewDidLoad {
@@ -83,11 +84,20 @@
     user.username = self.username.text;
     user.password = self.password.text;
     user.email = self.email.text;
-      
+
     user[@"games"] = @0;
     user[@"points"] = @0;
+
+    if (avatar == nil) {
+      UIImage *chosenImage = self.imageView.image;
+
+      NSData *imageData = UIImagePNGRepresentation(chosenImage);
+
+      avatar = [PFFile fileWithName:@"image123.png" data:imageData];
+    }
+
     user[@"image"] = avatar;
-      
+
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
           UIAlertView *success =
@@ -125,38 +135,36 @@
   return [emailTest evaluateWithObject:checkString];
 }
 
+- (IBAction)getPhoto:(id)sender {
+  UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+  picker.delegate = self;
+  picker.allowsEditing = YES;
 
-- (IBAction)getPhoto:(id)sender
-{
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    
-    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]){
-        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    } else {
-        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    }
+  if ([UIImagePickerController
+          isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+  } else {
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+  }
 
-    [self presentViewController:picker animated:YES completion:NULL];
+  [self presentViewController:picker animated:YES completion:NULL];
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    
-    NSData *imageData = UIImagePNGRepresentation(chosenImage);
+- (void)imagePickerController:(UIImagePickerController *)picker
+    didFinishPickingMediaWithInfo:(NSDictionary *)info {
+  UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
 
-    avatar = [PFFile fileWithName:@"image123.png" data:imageData];
-    
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-    self.imageView.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+  NSData *imageData = UIImagePNGRepresentation(chosenImage);
+
+  avatar = [PFFile fileWithName:@"image123.png" data:imageData];
+
+  [picker dismissViewControllerAnimated:YES completion:NULL];
+  self.imageView.image =
+      [info objectForKey:@"UIImagePickerControllerOriginalImage"];
 }
-
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-    
+
+  [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 @end

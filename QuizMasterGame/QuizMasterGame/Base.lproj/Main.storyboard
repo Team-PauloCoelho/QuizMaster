@@ -33,13 +33,6 @@
                                     <action selector="getPhoto:" destination="ABo-TX-klD" eventType="touchUpInside" id="v3x-uN-1VU"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="iDD-Kr-9dc">
-                                <rect key="frame" x="36" y="135" width="134" height="115"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="B0b-x6-hwG"/>
-                                    <constraint firstAttribute="width" constant="134" id="mZu-SC-g1o"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flD-my-dG1">
                                 <rect key="frame" x="16" y="283" width="174" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -113,6 +106,13 @@
                                 <color key="textColor" red="1" green="0.90803056969037321" blue="0.15211378184182445" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.9671588075666665" green="0.92047980325587098" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="iDD-Kr-9dc">
+                                <rect key="frame" x="36" y="135" width="134" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="B0b-x6-hwG"/>
+                                    <constraint firstAttribute="width" constant="134" id="mZu-SC-g1o"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.14901961386203766" green="0.12941177189350128" blue="0.38823533058166504" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
