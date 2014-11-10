@@ -28,7 +28,7 @@
   self.points = 0;
   self.questionNumber = 0;
   self.index = 0;
-  self.pointsLabel.text = [NSString stringWithFormat:@"%d", self.points];
+  self.pointsLabel.text = [NSString stringWithFormat:@"Points: %d", self.points];
   [self getAllQuestions];
   [super viewDidLoad];
 
@@ -115,7 +115,7 @@
 - (void)handleAnswer:(int)answer {
   if ([self checkAnswer:answer]) {
     ++self.points;
-    self.pointsLabel.text = [NSString stringWithFormat:@"%d", self.points];
+    self.pointsLabel.text = [NSString stringWithFormat:@"Points: %d", self.points];
     [self getNextQuestion];
   } else {
     [self showGameOverScreen];
@@ -186,12 +186,12 @@
 }
 
 #pragma marks - Gestures
-- (IBAction)longPressGesture:(UILongPressGestureRecognizer *)sender {
+- (IBAction)longPressGesture:(UILongPressGestureRecognizer *)sender{
   if (sender.state == UIGestureRecognizerStateEnded) {
     if (![self checkIfCheatUsedToday:CHEAT_CORRECT_ANSWER_LABEL]) {
 
       --self.points;
-      self.pointsLabel.text = [NSString stringWithFormat:@"%d", self.points];
+      self.pointsLabel.text = [NSString stringWithFormat:@"Points: %d", self.points];
 
       NSString *answer;
 
@@ -226,7 +226,7 @@
     if (![self checkIfCheatUsedToday:CHEAT_NEXT_QUESTION_LABEL]) {
 
       --self.points;
-      self.pointsLabel.text = [NSString stringWithFormat:@"%d", self.points];
+      self.pointsLabel.text = [NSString stringWithFormat:@"Points: %d", self.points];
       [self getNextQuestion];
       [self useCheat:CHEAT_NEXT_QUESTION_LABEL];
     } else {
@@ -257,7 +257,7 @@
       self.questionLabel.text =
           [NSString stringWithFormat:@"%d", self.questionNumber];
       self.points = 0;
-      self.pointsLabel.text = [NSString stringWithFormat:@"%d", self.points];
+      self.pointsLabel.text = [NSString stringWithFormat:@"Points: %d", self.points];
 
       [self getNextQuestion];
       [self showAlertWithTitle:@"RESET GAME"

@@ -14,6 +14,10 @@
 		571656731A09185600457F3E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571656721A09185600457F3E /* Images.xcassets */; };
 		571656761A09185600457F3E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571656741A09185600457F3E /* LaunchScreen.xib */; };
 		571656821A09185600457F3E /* QuizMasterGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 571656811A09185600457F3E /* QuizMasterGameTests.m */; };
+		5722CCCD1A10BED000867719 /* answer.png in Resources */ = {isa = PBXBuildFile; fileRef = 5722CCCB1A10BED000867719 /* answer.png */; };
+		5722CCCE1A10BED000867719 /* change.png in Resources */ = {isa = PBXBuildFile; fileRef = 5722CCCC1A10BED000867719 /* change.png */; };
+		5722CCD11A10BEF500867719 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 5722CCCF1A10BEF500867719 /* next.png */; };
+		5722CCD21A10BEF500867719 /* reset.png in Resources */ = {isa = PBXBuildFile; fileRef = 5722CCD01A10BEF500867719 /* reset.png */; };
 		572E35031A0AAEE000337942 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 572E35021A0AAEE000337942 /* MainViewController.m */; };
 		572E35061A0AAF8D00337942 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 572E35051A0AAF8D00337942 /* RegisterViewController.m */; };
 		574C6A631A0BC7D000731A9B /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 574C6A621A0BC7D000731A9B /* AudioController.m */; };
@@ -77,6 +81,10 @@
 		5716567B1A09185600457F3E /* QuizMasterGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizMasterGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		571656801A09185600457F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		571656811A09185600457F3E /* QuizMasterGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizMasterGameTests.m; sourceTree = "<group>"; };
+		5722CCCB1A10BED000867719 /* answer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = answer.png; sourceTree = "<group>"; };
+		5722CCCC1A10BED000867719 /* change.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = change.png; sourceTree = "<group>"; };
+		5722CCCF1A10BEF500867719 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		5722CCD01A10BEF500867719 /* reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reset.png; sourceTree = "<group>"; };
 		572E35011A0AAEE000337942 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		572E35021A0AAEE000337942 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		572E35041A0AAF8D00337942 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -281,6 +289,10 @@
 		5798E5AC1A0A4B6F00D02F40 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5722CCCF1A10BEF500867719 /* next.png */,
+				5722CCD01A10BEF500867719 /* reset.png */,
+				5722CCCB1A10BED000867719 /* answer.png */,
+				5722CCCC1A10BED000867719 /* change.png */,
 				579DA1DD1A1049790070AD71 /* shake.png */,
 				579DA1D91A102DE80070AD71 /* crown.png */,
 				579DA1DA1A102DE80070AD71 /* mobile.png */,
@@ -441,19 +453,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				579D839B1A0FF3F900B01B27 /* avatar.png in Resources */,
+				5722CCD21A10BEF500867719 /* reset.png in Resources */,
 				579A9C1F1A0D0CE200E2D8D8 /* game-won.png in Resources */,
 				5798E5B41A0A599300D02F40 /* background.jpg in Resources */,
 				571656711A09185600457F3E /* Main.storyboard in Resources */,
 				574C6A6B1A0BE14300731A9B /* song.mp3 in Resources */,
+				5722CCCD1A10BED000867719 /* answer.png in Resources */,
 				57E50BE11A0B9B9800F088E7 /* orange-button-hi.png in Resources */,
 				579DA1DE1A1049790070AD71 /* shake.png in Resources */,
 				5798E5C21A0A71BF00D02F40 /* background-home-1.png in Resources */,
 				579D839A1A0FF3F900B01B27 /* 1415581518_Brown_Monsters_14-01.png in Resources */,
 				579A9F521A0F0D5300EAD13A /* double.png in Resources */,
 				57E50BEC1A0B9E7400F088E7 /* glossy_button_blank_green_rectangle.png in Resources */,
+				5722CCD11A10BEF500867719 /* next.png in Resources */,
 				57E50BEB1A0B9E7400F088E7 /* 15787_wpm_lowres.png in Resources */,
 				5790CF4C1A0CE47E005C18D6 /* GameFinishViewController.xib in Resources */,
 				579DA1DB1A102DE80070AD71 /* crown.png in Resources */,
+				5722CCCE1A10BED000867719 /* change.png in Resources */,
 				571656761A09185600457F3E /* LaunchScreen.xib in Resources */,
 				571656731A09185600457F3E /* Images.xcassets in Resources */,
 				579A9F4E1A0F0D1300EAD13A /* long.png in Resources */,
