@@ -18,6 +18,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *resetGameIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *correctAnswerIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *changeQuestionIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *nextQuestionIcon;
+
+
 - (IBAction)longPressGesture:(UILongPressGestureRecognizer *)sender;
 - (IBAction)rotationGesture:(UIRotationGestureRecognizer *)sender;
 - (IBAction)tapGesture:(UITapGestureRecognizer *)sender;
