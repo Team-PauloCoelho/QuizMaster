@@ -8,6 +8,7 @@
 
 #import "PlayViewController.h"
 #import <Parse/Parse.h>
+#import <QuartzCore/QuartzCore.h>
 #import "Globals.h"
 #import "CoreDataHelper.h"
 #import "Cheat.h"
@@ -31,7 +32,7 @@
   self.pointsLabel.text =
       [NSString stringWithFormat:@"Points: %d", self.points];
   [self getAllQuestions];
-
+    [self roundImageCorners];
   [self deleteCheats];
   [self checkAllBonusses];
 
@@ -59,6 +60,24 @@
   if ([self checkIfCheatUsedToday:CHEAT_NEXT_QUESTION_LABEL]) {
     self.nextQuestionIcon.backgroundColor = [UIColor redColor];
   }
+}
+
+-(void) roundImageCorners {
+    self.resetGameIcon.layer.cornerRadius = 15;
+
+    self.correctAnswerIcon.layer.cornerRadius = 15;
+
+    self.changeQuestionIcon.layer.cornerRadius = 15;
+
+    self.nextQuestionIcon.layer.cornerRadius =15;
+    
+    self.resetGameIcon.clipsToBounds =  YES;
+    
+    self.correctAnswerIcon.clipsToBounds = YES;
+    
+    self.changeQuestionIcon.clipsToBounds = YES;
+    
+    self.nextQuestionIcon.clipsToBounds = YES;
 }
 
 - (void)getNextQuestion {
